@@ -4,6 +4,9 @@ class CreateScores < ActiveRecord::Migration
       t.references :user
       t.references :question
       t.references :answer
+      
+      t.integer :value
+      t.string :remark
 
       t.timestamps
     end

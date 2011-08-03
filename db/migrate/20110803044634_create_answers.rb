@@ -3,6 +3,10 @@ class CreateAnswers < ActiveRecord::Migration
     create_table :answers do |t|
       t.references :user
       t.references :question
+      
+      t.text :content
+      
+      t.binary :comment_a_json
 
       t.timestamps
     end
