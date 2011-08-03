@@ -4,7 +4,6 @@ class Answer < ActiveRecord::Base
   has_many :comments
   has_many :scores
   
-<<<<<<< HEAD
   # validations
   validates_presence_of :content
   
@@ -24,7 +23,4 @@ class Answer < ActiveRecord::Base
     # write into redis
     $redis.hset(hash_name, key, value)
   end
-=======
-  validates_presence_of :content
->>>>>>> 添加服务器端验证
 end
