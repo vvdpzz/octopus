@@ -3,4 +3,8 @@ class Question < ActiveRecord::Base
   
   has_many :answers
   has_many :scores
+  
+  validates_presence_of :title
+  validates_length_of :title, :within => 10..70
+  validates_presence_of :content
 end
