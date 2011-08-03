@@ -5,10 +5,14 @@ class CreateAnswers < ActiveRecord::Migration
       t.references :question
       
       t.text :content
+
+      t.string :username
+      t.string :me
       
       t.binary :comment_a_json
 
-      t.timestamps
+      t.integer :created_at
+      t.integer :updated_at
     end
   end
 

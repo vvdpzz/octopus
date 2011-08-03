@@ -5,6 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       
       t.string :realname
       t.string :username
+      t.string :me
       t.integer :subscribe_count
       t.integer :following_count
       t.integer :follower_count

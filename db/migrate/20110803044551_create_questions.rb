@@ -12,7 +12,8 @@ class CreateQuestions < ActiveRecord::Migration
       
       t.string :follower_id_list      
 
-      t.timestamps
+      t.integer :created_at
+      t.integer :updated_at
     end
   end
 
