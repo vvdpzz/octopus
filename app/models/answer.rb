@@ -3,7 +3,11 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   has_many :comments
   has_many :scores
-
+  
+<<<<<<< HEAD
+  # validations
+  validates_presence_of :content
+  
   def insert_to_redis
     # UNIX Timestamp
     self.created_at = self.updated_at = Time.now.to_i
@@ -20,4 +24,7 @@ class Answer < ActiveRecord::Base
     # write into redis
     $redis.hset(hash_name, key, value)
   end
+=======
+  validates_presence_of :content
+>>>>>>> 添加服务器端验证
 end
