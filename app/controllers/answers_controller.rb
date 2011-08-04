@@ -11,7 +11,7 @@ class AnswersController < ApplicationController
 
     if @answer.valid?
       @answer.insert_to_redis
-      redirect_to @answer.question
+      redirect_to "/questions/#{params[:question_id]}"
     else
       render :new
     end
