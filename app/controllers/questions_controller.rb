@@ -11,7 +11,10 @@ class QuestionsController < ApplicationController
   end
   
   def show
-    @question = $redis.hget('questions', params[:id])
+    s = Time.now
+    value = $redis.hget('questions', params[:id])
+    @question = JSON.parse value
+    puts Time.now - s
   end
   
   def new
@@ -19,15 +22,14 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    @question = Question.new params([:question])
+    @question = Question.new params[:question]
     
-    if question.valid?
-      # asker info
-      question.user_id = current_user.id
-      question.username = current_user.realname
-      question.me = current_user.me
-      # insert to redis
-      question.insert_to_redis
+    # asker info
+    @question.user_id = current_user.id
+    @question.username = current_user.realname
+    
+    if @question.valid?
+      @question.insert_to_redis
       redirect_to @question
     else
       render :new
