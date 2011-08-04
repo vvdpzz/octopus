@@ -60,8 +60,12 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer "user_id"
     t.string  "title"
     t.text    "content"
+<<<<<<< HEAD
     t.integer "credit"
     t.integer "money"
+=======
+    t.string  "username"
+>>>>>>> 临时以strings存储question
     t.string  "answer_id_list"
     t.binary  "comment_q_json"
     t.string  "follower_id_list"

@@ -11,4 +11,21 @@ class Question < ActiveRecord::Base
     hash_name = "questions:#{self.id}"
     $redis.hvals(hash_name)
   end
+  
+  def insert_to_redis    
+    # UNIX Timestamp
+    question.created_at = question.updated_at = Time.now.to_i
+    
+    # use redcarpet to render context
+    question.markdown = Helper.markdown(question.content)
+    
+    # TODO: wait to use real UUID
+    uuid = $redis.incr 'next.question.id'
+    
+    # serialize it into json
+    serialized_data = MultiJson.encode(question.serializable_hash)
+    
+    # write into redis
+    $redis.set("questions:#{uuid}", serialized_data)
+  end
 end

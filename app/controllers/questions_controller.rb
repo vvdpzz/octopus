@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   
   def index
-    @questions = Question.all
+    # @questions = current_user.
   end
   
   def new
@@ -9,9 +9,15 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    @question = current_user.questions.build(params[:question])
-    if @question.save
-      redirect_to @question
+    @question = Question.new params([:question])
+    
+    if answer.valid?
+      # asker info
+      question.user_id = current_user.id
+      question.username = current_user.realname
+      question.me = current_user.me
+      # insert to redis
+      question.insert_to_redis
     else
       render :new
     end

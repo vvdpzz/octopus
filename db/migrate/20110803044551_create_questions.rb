@@ -5,6 +5,7 @@ class CreateQuestions < ActiveRecord::Migration
       
       t.string :title
       t.text :content
+      t.string :username
       
       t.integer :credit
       t.integer :money
