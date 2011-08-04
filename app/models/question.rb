@@ -13,11 +13,6 @@ class Question < ActiveRecord::Base
     questions = $redis.hvals(hash_name) 
   end
   
-  def get_all_answers_from_redis
-    hash_name = "questions:#{self.id}"
-    $redis.hvals(hash_name)
-  end
-  
   def insert_to_redis
     # UNIX Timestamp
     self.created_at = self.updated_at = Time.now.to_i

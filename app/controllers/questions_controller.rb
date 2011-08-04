@@ -11,10 +11,10 @@ class QuestionsController < ApplicationController
   end
   
   def show
-    s = Time.now
     value = $redis.hget('questions', params[:id])
     @question = JSON.parse value
-    puts Time.now - s
+    hash_name = "questions:#{params[:id]}"
+    @answers = $redis.hvals(hash_name)
   end
   
   def new
