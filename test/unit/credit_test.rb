@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ScoreTest < ActiveSupport::TestCase
+class CreditTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

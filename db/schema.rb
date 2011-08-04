@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer "updated_at"
   end
 
-  create_table "scores", :force => true do |t|
+  create_table "credits", :force => true do |t|
     t.integer  "user_id"
     t.integer  "question_id"
     t.integer  "answer_id"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer  "follower_count"
     t.integer  "publish_q_count"
     t.integer  "publish_a_count"
-    t.integer  "score",                                 :default => 0
+    t.integer  "credit",                                 :default => 0
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

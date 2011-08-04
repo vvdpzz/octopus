@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :follower_count
       t.integer :publish_q_count
       t.integer :publish_a_count
-      t.integer :score, :default => 0
+      t.integer :credit, :default => 0
             
       t.recoverable
       t.rememberable

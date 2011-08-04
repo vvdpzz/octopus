@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
   has_one :profile
-  has_many :scores
+  has_many :credits
   
   has_many :questions
   has_many :answers
