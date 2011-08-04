@@ -26,7 +26,7 @@ class Question < ActiveRecord::Base
     hash_name = "questions"
     
     # hash key name
-    key = $redis.incr 'next.question.id'    
+    key = $redis.incr 'next.question.id'
     self.id = key
     
     # serialize it into json
