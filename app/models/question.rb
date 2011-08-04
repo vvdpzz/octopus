@@ -10,7 +10,8 @@ class Question < ActiveRecord::Base
   validate :credit_enough, :money_enough
   
   def self.questions_list
-    # wait for the storage of questions
+    hash_name = "questions"
+    questions = $redis.hvals(hash_name) 
   end
   
   def get_all_answers_from_redis
@@ -23,14 +24,14 @@ class Question < ActiveRecord::Base
     self.created_at = self.updated_at = Time.now.to_i
         
     id = $redis.incr 'next.question.id'
-    
-    key = "questions:#{id}"
+    hash_name = "questions"
+    key = "question:#{id}"
     
     # serialize it into json
     value = MultiJson.encode(self.serializable_hash)
     
     # write into redis
-    $redis.set(key, value)
+    $redis.hset(hash_name, key, value)
   end
   
   # validations
