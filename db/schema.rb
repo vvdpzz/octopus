@@ -10,13 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803045424) do
+ActiveRecord::Schema.define(:version => 20110803091648) do
 
   create_table "answers", :force => true do |t|
+    t.integer "user_id"
+    t.integer "question_id"
+    t.text    "content"
+    t.string  "username"
+    t.string  "me"
+    t.binary  "comment_a_json"
+    t.integer "created_at"
+    t.integer "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "question_id"
     t.text     "content"
-    t.binary   "comment_a_json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,14 +57,16 @@ ActiveRecord::Schema.define(:version => 20110803045424) do
   end
 
   create_table "questions", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "title"
-    t.text     "content"
-    t.string   "answer_id_list"
-    t.binary   "comment_q_json"
-    t.string   "follower_id_list"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id"
+    t.string  "title"
+    t.text    "content"
+    t.integer "credit"
+    t.integer "money"
+    t.string  "answer_id_list"
+    t.binary  "comment_q_json"
+    t.string  "follower_id_list"
+    t.integer "created_at"
+    t.integer "updated_at"
   end
 
   create_table "scores", :force => true do |t|
@@ -84,12 +95,13 @@ ActiveRecord::Schema.define(:version => 20110803045424) do
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "realname"
     t.string   "username"
+    t.string   "me"
     t.integer  "subscribe_count"
     t.integer  "following_count"
     t.integer  "follower_count"
     t.integer  "publish_q_count"
     t.integer  "publish_a_count"
-    t.integer  "score"
+    t.integer  "score",                                 :default => 0
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

@@ -1,0 +1,21 @@
+<%= form_for @question do |f| %>
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_area :title %>
+	</p>
+	<p>
+		<%= f.label :content %><br>
+		<%= f.text_area :content %>
+	</p>
+	<p>
+		<%= f.label :credit %><br>
+		<%= f.text_field :credit %>
+	</p>
+	<p>
+		<%= f.label :money %><br>
+		<%= f.text_field :money %>
+	</p>
+	<p>
+		<%= f.submit button_text %>
+	</p>
+<% end %>

@@ -7,8 +7,8 @@ class Question < ActiveRecord::Base
   validates_length_of :title, :within => 10..70
   validates_presence_of :content
   
-  def find_all_answers
-    hash_name = "question:#{self.id}"
+  def get_all_answers_from_redis
+    hash_name = "questions:#{self.id}"
     $redis.hvals(hash_name)
   end
 end

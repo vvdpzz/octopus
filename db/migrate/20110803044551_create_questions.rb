@@ -6,6 +6,9 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :title
       t.text :content
       
+      t.integer :credit
+      t.integer :money
+      
       t.string :answer_id_list
       
       t.binary :comment_q_json
