@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803091648) do
+ActiveRecord::Schema.define(:version => 20110803045424) do
 
   create_table "answers", :force => true do |t|
     t.integer "user_id"
@@ -21,13 +21,6 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.binary  "comment_a_json"
     t.integer "created_at"
     t.integer "updated_at"
-  end
-
-  create_table "comments", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "messages", :force => true do |t|
@@ -60,12 +53,9 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer "user_id"
     t.string  "title"
     t.text    "content"
-<<<<<<< HEAD
+    t.string  "username"
     t.integer "credit"
     t.integer "money"
-=======
-    t.string  "username"
->>>>>>> 临时以strings存储question
     t.string  "answer_id_list"
     t.binary  "comment_q_json"
     t.string  "follower_id_list"

@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   
   def index
-    # @questions = current_user.
+    questions = Question.questions_list
   end
   
   def new

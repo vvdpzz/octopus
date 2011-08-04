@@ -7,12 +7,16 @@ class Question < ActiveRecord::Base
   validates_length_of :title, :within => 10..70
   validates_presence_of :content
   
+  def self.questions_list
+    # wait for the storage of questions
+  end
+  
   def get_all_answers_from_redis
     hash_name = "questions:#{self.id}"
     $redis.hvals(hash_name)
   end
   
-  def insert_to_redis    
+  def insert_to_redis
     # UNIX Timestamp
     question.created_at = question.updated_at = Time.now.to_i
     
