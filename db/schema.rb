@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.datetime "updated_at"
   end
 
+  create_table "credits", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "question_id"
+    t.integer  "answer_id"
+    t.integer  "value"
+    t.string   "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "messages", :force => true do |t|
     t.integer  "sender_id"
     t.integer  "receiver_id"
@@ -69,16 +79,6 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer "updated_at"
   end
 
-  create_table "credits", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "question_id"
-    t.integer  "answer_id"
-    t.integer  "value"
-    t.string   "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tags", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20110803091648) do
     t.integer  "follower_count"
     t.integer  "publish_q_count"
     t.integer  "publish_a_count"
-    t.integer  "credit",                                 :default => 0
+    t.integer  "credit",                                :default => 0
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
