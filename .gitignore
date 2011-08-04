@@ -2,7 +2,4 @@
 db/*.sqlite3
 log/*.log
 tmp/
-
-db/migrate/20110803091648_create_comments.rb
-
 db/schema.rb

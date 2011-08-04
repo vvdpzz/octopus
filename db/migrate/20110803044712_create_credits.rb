@@ -1,6 +1,6 @@
-class CreateScores < ActiveRecord::Migration
+class CreateCredits < ActiveRecord::Migration
   def self.up
-    create_table :scores do |t|
+    create_table :credits do |t|
       t.references :user
       t.references :question
       t.references :answer
@@ -13,6 +13,6 @@ class CreateScores < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :scores
+    drop_table :credits
   end
 end
