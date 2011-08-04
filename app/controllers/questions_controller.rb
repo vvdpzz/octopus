@@ -10,6 +10,10 @@ class QuestionsController < ApplicationController
     questions = Question.questions_list
   end
   
+  def show
+    @question = $redis.hget('questions', params[:id])
+  end
+  
   def new
     @question = Question.new
   end
@@ -24,6 +28,7 @@ class QuestionsController < ApplicationController
       question.me = current_user.me
       # insert to redis
       question.insert_to_redis
+      redirect_to @question
     else
       render :new
     end

@@ -21,16 +21,20 @@ class Question < ActiveRecord::Base
   def insert_to_redis
     # UNIX Timestamp
     self.created_at = self.updated_at = Time.now.to_i
-        
-    id = $redis.incr 'next.question.id'
     
-    key = "questions:#{id}"
+    # redis hash name
+    hash_name = "questions"
+    
+    # hash key name
+    key = $redis.incr 'next.question.id'
+    
+    self.id = key
     
     # serialize it into json
     value = MultiJson.encode(self.serializable_hash)
-    
+
     # write into redis
-    $redis.set(key, value)
+    $redis.hset(hash_name, key, value)
   end
   
   # validations
