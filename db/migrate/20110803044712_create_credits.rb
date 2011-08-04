@@ -1,4 +1,4 @@
-class CreateScores < ActiveRecord::Migration
+class CreateCredits < ActiveRecord::Migration
   def self.up
     create_table :credits do |t|
       t.references :user
