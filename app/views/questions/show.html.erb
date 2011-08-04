@@ -11,3 +11,11 @@
 <p>
 	<%= @question['expire_time'] %>
 </p>
+
+<hr>
+
+
+<%= form_for([@question, Answer.new]) do |f| %>
+	<%= f.text_area :content %>
+	<%= f.submit 'Create an Answer' %>
+<% end %>

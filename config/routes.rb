@@ -1,7 +1,9 @@
 Octopus::Application.routes.draw do
   devise_for :users
   
-  resources :questions
+  resources :questions do
+    resources :answers
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
