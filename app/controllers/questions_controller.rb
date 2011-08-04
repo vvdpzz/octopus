@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new params([:question])
     
-    if answer.valid?
+    if question.valid?
       # asker info
       question.user_id = current_user.id
       question.username = current_user.realname

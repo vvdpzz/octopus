@@ -7,8 +7,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :content
       t.string :username
       
-      t.integer :credit
-      t.integer :money
+      t.integer :credit,:default => 0
+      t.float   :money, :default => 0.00
       
       t.string :answer_id_list
       t.integer :accept_a_id

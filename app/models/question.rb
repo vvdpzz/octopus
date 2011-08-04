@@ -7,6 +7,8 @@ class Question < ActiveRecord::Base
   validates_length_of :title, :within => 10..70
   validates_presence_of :content
   
+  validate :credit_enough, :money_enough
+  
   def self.questions_list
     # wait for the storage of questions
   end
@@ -18,18 +20,25 @@ class Question < ActiveRecord::Base
   
   def insert_to_redis
     # UNIX Timestamp
-    question.created_at = question.updated_at = Time.now.to_i
+    self.created_at = self.updated_at = Time.now.to_i
+        
+    id = $redis.incr 'next.question.id'
     
-    # use redcarpet to render context
-    question.markdown = Helper.markdown(question.content)
-    
-    # TODO: wait to use real UUID
-    uuid = $redis.incr 'next.question.id'
+    key = "questions:#{id}"
     
     # serialize it into json
-    serialized_data = MultiJson.encode(question.serializable_hash)
+    value = MultiJson.encode(self.serializable_hash)
     
     # write into redis
-    $redis.set("questions:#{uuid}", serialized_data)
+    $redis.set(key, value)
+  end
+  
+  # validations
+  def credit_enough
+    errors.add(:credit, "you do not have enough credit to pay.") if self.user.credit < self.credit
+  end
+  
+  def money_enough
+    errors.add(:money, "you do not have enough money to pay.") if self.user.money < self.money
   end
 end
