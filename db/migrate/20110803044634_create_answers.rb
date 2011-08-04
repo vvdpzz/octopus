@@ -4,6 +4,8 @@ class CreateAnswers < ActiveRecord::Migration
       t.references :user
       t.references :question
       
+      t.boolean :anonymous, :default => false
+      
       t.text :content
 
       t.string :username

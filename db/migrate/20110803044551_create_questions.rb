@@ -7,6 +7,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :content
       t.string :username
       
+      t.boolean :anonymous, :default => false
+      
       t.integer :credit,:default => 0
       t.float   :money, :default => 0.00
       t.datetime :expire_time
