@@ -1,6 +1,12 @@
 class QuestionsController < ApplicationController
   
   def index
+    #followers lastest status
+    
+    #groups lastest status
+  end
+  
+  def ask_question
     questions = Question.questions_list
   end
   

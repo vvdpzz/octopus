@@ -11,6 +11,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.integer :money
       
       t.string :answer_id_list
+      t.integer :accept_a_id
+      t.string :status
       
       t.binary :comment_q_json
       
