@@ -2,7 +2,22 @@ Octopus::Application.routes.draw do
   devise_for :users
   
   resources :questions do
+    resources :votes, :only => [] do
+      collection do
+        get 'up'
+        get 'down'
+      end
+    end
     resources :answers
+  end
+  
+  resources :answers, :only => [] do
+    resources :votes, :only => [] do
+      collection do
+        get 'up'
+        get 'down'
+      end
+    end
   end
   
 
