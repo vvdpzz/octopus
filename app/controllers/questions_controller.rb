@@ -30,6 +30,13 @@ class QuestionsController < ApplicationController
     
     if @question.valid?
       @question.insert_to_redis
+      
+    # asker pay for question
+      if !@question.is_free?
+        current_user.pay_for_q_or_a("credit", @question.credit)
+        current_user.pay_for_q_or_a("money", @question.money)
+      end
+      
       redirect_to @question
     else
       render :new

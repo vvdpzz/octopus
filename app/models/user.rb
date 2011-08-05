@@ -19,4 +19,13 @@ class User < ActiveRecord::Base
   has_many :notifications
   
   has_many :transactions
+  
+  def pay_for_q_or_a(payment, amount)
+    amount = $redis.hget("users:#{self.id}", payment).to_i - amount
+    $redis.hset("users:#{self.id}", payment, amount)
+  end
+  
+  def pay_for_q_and_a
+    
+  end
 end
