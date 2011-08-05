@@ -10,7 +10,7 @@ class Question < ActiveRecord::Base
   
   def self.questions_list
     hash_name = "questions"
-    questions = $redis.hvals(hash_name) 
+    questions = $redis.hvals(hash_name)
   end
   
   def insert_to_redis
