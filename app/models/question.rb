@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
   
   # validates_length_of :title, :within => 10..70
   
-  validate :credit_enough, :money_enough
+  # validate :credit_enough, :money_enough
   
   def self.questions_list
     hash_name = "questions"

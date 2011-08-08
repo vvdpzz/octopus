@@ -30,7 +30,8 @@ class QuestionsController < ApplicationController
     
     if @question.valid?
       @question.insert_to_redis
-      
+      #***************
+      $redis.set("q:#{@question.id}:uid", current_user.id)
     # asker pay for question
       if !@question.is_free?
         current_user.pay_for_q_or_a("credit", @question.credit)

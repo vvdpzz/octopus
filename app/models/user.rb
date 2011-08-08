@@ -24,8 +24,4 @@ class User < ActiveRecord::Base
     amount = $redis.hget("users:#{self.id}", payment).to_i - amount
     $redis.hset("users:#{self.id}", payment, amount)
   end
-  
-  def pay_for_q_and_a
-    
-  end
 end
