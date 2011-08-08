@@ -18,17 +18,19 @@ class Question < ActiveRecord::Base
     self.created_at = self.updated_at = Time.now.to_i
     
     # redis hash name
-    hash_name = "questions"
+    hash_name = 'q'
     
     # hash key name
     key = $redis.incr 'next.question.id'
-    self.id = key
     
     # serialize it into json
     value = MultiJson.encode(self.serializable_hash)
 
     # write into redis
     $redis.hset(hash_name, key, value)
+    
+    # question user info
+    $redis.set("q:#{key}.uid", user_id)
   end
   
   def is_free?
@@ -38,13 +40,13 @@ class Question < ActiveRecord::Base
   # validations
   def credit_enough
     # 需 要 获 取 当 前 用 户 的 user_id
-    current_user_credit = $redis.hget("users:#{current_user.id}", "credit")
+    current_user_credit = $redis.hget("u:#{current_user.id}", 'credit')
     errors.add(:credit, "you do not have enough credit to pay.") if current_user_credit < self.credit
   end
   
   def money_enough
     # 需 要 获 取 当 前 用 户 的 user_id
-    current_user_money = $redis.hget("users:#{current_user.id}", "money")
+    current_user_money = $redis.hget("u:#{current_user.id}", 'money')
     errors.add(:money, "you do not have enough money to pay.") if current_user_money < self.money
   end
 end

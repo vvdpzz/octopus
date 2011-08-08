@@ -10,10 +10,7 @@ class AnswersController < ApplicationController
     @answer.me = current_user.me
 
     if @answer.valid?
-      @answer.insert_to_redis
-      #***************
-      $redis.set("a:#{@answer.id}:uid", current_user.id)
-      
+      @answer.insert_to_redis      
       redirect_to "/questions/#{params[:question_id]}"
     else
       render :new

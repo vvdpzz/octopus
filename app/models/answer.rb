@@ -22,5 +22,8 @@ class Answer < ActiveRecord::Base
 
     # write into redis
     $redis.hset(hash_name, key, value)
+    
+    # answer user info
+    $redis.set("a:#{key}.uid", self.user_id)
   end
 end

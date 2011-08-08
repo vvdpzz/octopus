@@ -13,17 +13,17 @@ $redis.multi do
   User.all.each do |user|
     puts "\tuser #{user.id} ready"
     user.attributes.each do |attr_name, attr_value|
-      $redis.hset("users:#{user.id}", attr_name, attr_value)
+      $redis.hset("u:#{user.id}", attr_name, attr_value)
     end
   end
 
   puts "Push question and answer's user info to redis >_<\n\n"
 
   Question.all.each do |question|
-    $redis.set("q:#{question.id}:uid", question.user_id)
+    $redis.set("q:#{question.id}.uid", question.user_id)
   end
   
   Answer.all.each do |answer|
-    $redis.set("a:#{answer.id}:uid", answer.user_id)
+    $redis.set("a:#{answer.id}.uid", answer.user_id)
   end
 end

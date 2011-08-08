@@ -11,9 +11,9 @@ class QuestionsController < ApplicationController
   end
   
   def show
-    value = $redis.hget('questions', params[:id])
+    value = $redis.hget('q', params[:id])
     @question = JSON.parse value
-    hash_name = "questions:#{params[:id]}"
+    hash_name = "q:#{params[:id]}"
     @answers = $redis.hvals(hash_name)
   end
   
@@ -24,16 +24,19 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new params[:question]
     
-    # asker info
     @question.user_id = current_user.id
     @question.username = current_user.realname
     
     if @question.valid?
       @question.insert_to_redis
-      #***************
-      $redis.set("q:#{@question.id}:uid", current_user.id)
-    # asker pay for question
+      # asker pay for question
       if !@question.is_free?
+        
+        user_new_credit = $redis.hget("u:#{current_user.id}", "credit").to_i - amount
+        $redis.hset("u:#{current_user.id}", "credit", user_new_credit)
+
+        question_new_credit = $redis.hget("q:#{@question.id}.json")
+        
         current_user.pay_for_q_or_a("credit", @question.credit)
         current_user.pay_for_q_or_a("money", @question.money)
       end
