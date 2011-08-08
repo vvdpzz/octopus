@@ -13,6 +13,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :publish_a_count
       t.integer :credit, :default => 0
       t.float   :money, :default => 0.00
+      t.integer :vote_per_day, :default => 40
+      t.integer :credit_today, :default => 0
             
       t.recoverable
       t.rememberable
