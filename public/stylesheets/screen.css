@@ -1,535 +1,3314 @@
-/* line 4, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html {
+/* line 2, ../../app/stylesheets/screen.scss */
+html, body {
+  font-family: "Arial","Bitstream Vera Sans",sans-serif;
   margin: 0;
   padding: 0;
-  border: 0;
+  text-rendering: optimizeSpeed;
 }
 
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
-div, span, object, iframe, p,
-pre, a, abbr, acronym, address,
-code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend,
-caption, tbody, tfoot, thead, tr {
-  margin: 0;
+/* line 9, ../../app/stylesheets/screen.scss */
+body {
+  background-color: #eee;
+  color: #666;
+  font-size: 62.5%;
+  text-align: center;
+}
+
+/* line 16, ../../app/stylesheets/screen.scss */
+code, dl, li, p, td, th, pre {
+  font-size: 1.2em;
+}
+
+/* line 20, ../../app/stylesheets/screen.scss */
+li li, li p {
+  font-size: 1em;
+}
+
+/* line 24, ../../app/stylesheets/screen.scss */
+td td, td li, td p {
+  font-size: 1em;
+}
+
+/* line 28, ../../app/stylesheets/screen.scss */
+div.hrSidebarEdit, div.hrSidebarNavigation, div.hrSidebarFocus, div.hrSidebarMuted, div.hrSidebarSearch, div.hrNavigation, div.hrFocus, div.hrFocusHalf, div.hrMutedHalf, div.hrEdit, div.hrQuestions, div.hrFullFocus, div.hrFullNavigation, div.hrFooter {
+  background-color: transparent;
+  background-image: url(http://static.ifixit.net/static/images/layout/hrs-20100617.gif);
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 6px;
+  height: 6px;
+  margin: 16px 0 0 0;
+}
+
+/* line 38, ../../app/stylesheets/screen.scss */
+div.hrSidebarEdit {
+  background-position: 0 0;
+}
+
+/* line 42, ../../app/stylesheets/screen.scss */
+div.hrSidebarNavigation {
+  background-position: -316px 0;
+}
+
+/* line 46, ../../app/stylesheets/screen.scss */
+div.hrSidebarFocus {
+  background-position: -632px 0;
+}
+
+/* line 50, ../../app/stylesheets/screen.scss */
+div.hrSidebarSearch {
+  background-position: -632px 0;
+}
+
+/* line 54, ../../app/stylesheets/screen.scss */
+div.hrSidebarMuted {
+  background-position: -948px 0;
+}
+
+/* line 58, ../../app/stylesheets/screen.scss */
+div.hrNavigation {
+  background-position: -1264px 0;
+}
+
+/* line 62, ../../app/stylesheets/screen.scss */
+div.hrFocus {
+  background-position: -1857px 0;
+}
+
+/* line 66, ../../app/stylesheets/screen.scss */
+div.hrFocusHalf {
+  background-position: -1857px 0;
+}
+
+/* line 70, ../../app/stylesheets/screen.scss */
+div.hrMutedHalf {
+  background-position: -1857px 0;
+}
+
+/* line 74, ../../app/stylesheets/screen.scss */
+div.hrEdit {
+  background-position: -2450px 0;
+}
+
+/* line 78, ../../app/stylesheets/screen.scss */
+div.hrQuestions {
+  background-position: -3043px 0;
+}
+
+/* line 82, ../../app/stylesheets/screen.scss */
+div.hrFullFocus {
+  background-position: -3636px 0;
+}
+
+/* line 86, ../../app/stylesheets/screen.scss */
+div.hrFullNavigation {
+  background-position: -4567px 0;
+}
+
+/* line 90, ../../app/stylesheets/screen.scss */
+div.hrNavigationFull {
+  background-position: -4567px 0;
+}
+
+/* line 94, ../../app/stylesheets/screen.scss */
+div.hrFooter {
+  background-position: -5498px 0;
+}
+
+/* line 98, ../../app/stylesheets/screen.scss */
+div.hrContentMinor, div.hrSidebarMinor, div.hrSidebarMinorGray {
+  border: none;
+  border-bottom: 1px dotted transparent;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  margin: 8px 0;
+}
+
+/* line 107, ../../app/stylesheets/screen.scss */
+div.hrContentMinor, div.hrSidebarMinor {
+  border-color: #ddd;
+}
+
+/* line 111, ../../app/stylesheets/screen.scss */
+div.hrSidebarMinorGray {
+  border-color: #eee;
+}
+
+/* line 115, ../../app/stylesheets/screen.scss */
+div.hrLargeMargins {
+  margin: 16px 0;
+}
+
+/* line 119, ../../app/stylesheets/screen.scss */
+div.hrTop {
+  margin-top: 0;
+}
+
+/* line 123, ../../app/stylesheets/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+}
+
+/* line 127, ../../app/stylesheets/screen.scss */
+h1 {
+  color: #444;
+  font-family: "Helvetica",Arial,sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin: 3px 0;
   padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+/* line 136, ../../app/stylesheets/screen.scss */
+h2, .pseudoH2 {
+  border-bottom: 4px solid #eee;
+  color: #444;
+  font-family: "Helvetica",Arial,sans-serif;
+  font-size: 2.2em;
+  font-weight: bold;
+  line-height: 1.21em;
+  margin: 24px 0 0;
+  padding: 0 0 2px 0;
 }
 
-/* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote, q {
-  quotes: "" "";
-}
-/* line 67, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
+/* line 147, ../../app/stylesheets/screen.scss */
+h2.subhead, .pseudoH2.subhead {
+  border-bottom: none;
+  color: #444;
+  padding-bottom: 0;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-th, td, caption {
-  float: none !important;
-  text-align: left;
+/* line 153, ../../app/stylesheets/screen.scss */
+h2.muted, .pseudoH2.muted {
+  border-bottom-color: #eee;
+  color: #444;
+}
+
+/* line 158, ../../app/stylesheets/screen.scss */
+#sidebar h2 {
+  border-bottom: none;
+  margin-top: 3px;
+  padding-bottom: 0;
+}
+
+/* line 164, ../../app/stylesheets/screen.scss */
+h3, .pseudoH3 {
+  color: #666;
+  font-family: "Helvetica",Arial,sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.21em;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+/* line 174, ../../app/stylesheets/screen.scss */
+.sidebarBox h3 {
+  margin: 3px 0;
+}
+
+/* line 178, ../../app/stylesheets/screen.scss */
+h4, .pseudoH4 {
+  color: #666;
+  font-family: "Arial",serif;
+  font-size: 1.5em;
+  margin: 3px 0;
+}
+
+/* line 185, ../../app/stylesheets/screen.scss */
+h5, .pseudoH5 {
+  color: #444;
+  font-family: "Arial",sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 3px 0;
+  padding: 0;
+}
+
+/* line 194, ../../app/stylesheets/screen.scss */
+h6 {
+  color: #444;
+  font-size: 1.2em;
   font-weight: normal;
-  vertical-align: middle;
+  margin: 3px 0;
+  padding: 0;
 }
 
-/* line 23, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
+/* line 202, ../../app/stylesheets/screen.scss */
+.headerLink {
+  float: right;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 206, ../../app/stylesheets/screen.scss */
+h1 .headerLink {
+  font-family: "Arial","Arial",sans-serif;
+  font-size: .462em;
+  margin-left: 16px;
+  margin-top: 1.1em;
+}
+
+/* line 213, ../../app/stylesheets/screen.scss */
+h2 .headerLink {
+  font-size: .545em;
+  margin-left: 16px;
+  margin-top: .3em;
+}
+
+/* line 219, ../../app/stylesheets/screen.scss */
+h3 .headerLink {
+  font-size: .667em;
+  margin-left: 16px;
+  margin-top: -0.1em;
+}
+
+/* line 225, ../../app/stylesheets/screen.scss */
+h4 .headerLink {
+  font-size: .857em;
+  margin-left: 16px;
+  margin-top: .167em;
+}
+
+/* line 231, ../../app/stylesheets/screen.scss */
+h1.bigMargins, h2.bigMargins, h3.bigMargins, h4.bigMargins, h5.bigMargins, h6.bigMargins {
+  margin: 10px 0;
+}
+
+/* line 235, ../../app/stylesheets/screen.scss */
+p {
+  margin: 8px 0;
+  padding: 0;
+}
+
+/* line 240, ../../app/stylesheets/screen.scss */
+p.noMargins {
+  margin: 0;
+}
+
+/* line 244, ../../app/stylesheets/screen.scss */
+p.flushHeader {
+  margin: 3px 0 8px 0;
+}
+
+/* line 248, ../../app/stylesheets/screen.scss */
+p.assocTop {
+  margin: 8px 0 16px;
+}
+
+/* line 252, ../../app/stylesheets/screen.scss */
+p.sourceText {
+  font-family: "Monaco","Lucida Console","Courier New","Courier",monospace;
+}
+
+/* line 256, ../../app/stylesheets/screen.scss */
+a, a:visited, a strong {
+  color: #336da8;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 262, ../../app/stylesheets/screen.scss */
+.muted, .muted:visited {
+  color: #668c9d;
+}
+
+/* line 266, ../../app/stylesheets/screen.scss */
+.focus, .focus:visited {
+  color: #fe6f15;
+}
+
+/* line 270, ../../app/stylesheets/screen.scss */
+a.newArticle, a.newArticle:visited {
+  color: red;
+}
+
+/* line 274, ../../app/stylesheets/screen.scss */
+a:hover, a.muted:hover {
+  text-decoration: underline;
+}
+
+/* line 278, ../../app/stylesheets/screen.scss */
 a img {
   border: none;
 }
 
-/* line 20, ../../app/stylesheets/screen.scss */
-body.bp {
-  line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: #333333;
-  font-size: 75%;
+/* line 282, ../../app/stylesheets/screen.scss */
+a:hover img {
+  border: none;
 }
-/* line 51, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+
+/* line 286, ../../app/stylesheets/screen.scss */
+a img.noborder {
+  border: none;
+}
+
+/* line 290, ../../app/stylesheets/screen.scss */
+h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited {
+  color: #444;
+}
+
+/* line 294, ../../app/stylesheets/screen.scss */
+h1 a.focus, h1 a.focus:visited, h2 a.focus, h2 a.focus:visited, h3 a.focus, h3 a.focus:visited, h4 a.focus, h4 a.focus:visited, h5 a.focus, h5 a.focus:visited, h6 a.focus, h6 a.focus:visited {
+  color: #336da8;
+}
+
+/* line 298, ../../app/stylesheets/screen.scss */
+a.anchor {
+  color: #aaa;
+  font-size: small;
   font-weight: normal;
-  color: #222222;
+  text-decoration: none;
+  visibility: hidden;
 }
-/* line 52, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 img, body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img {
+
+/* line 306, ../../app/stylesheets/screen.scss */
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
+  visibility: visible;
+}
+
+/* line 310, ../../app/stylesheets/screen.scss */
+b, strong {
+  color: #444;
+}
+
+/* line 314, ../../app/stylesheets/screen.scss */
+.price {
+  color: #fe6f15;
+  font-weight: bold;
+}
+
+/* line 319, ../../app/stylesheets/screen.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 323, ../../app/stylesheets/screen.scss */
+th {
+  text-align: left;
+}
+
+/* line 327, ../../app/stylesheets/screen.scss */
+th.number, td.number {
+  text-align: right;
+}
+
+/* line 331, ../../app/stylesheets/screen.scss */
+table.grayHeader th {
+  background-color: #aaa;
+  color: #fff;
+  padding: 3px;
+}
+
+/* line 337, ../../app/stylesheets/screen.scss */
+table.grayHeader td {
+  padding: 3px;
+}
+
+/* line 341, ../../app/stylesheets/screen.scss */
+form {
   margin: 0;
 }
-/* line 53, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.50em;
+
+/* line 345, ../../app/stylesheets/screen.scss */
+.formBody {
+  background-color: #eee;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  padding: 0 8px 8px 8px;
+  webkit-border-radius: 4px;
 }
-/* line 54, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-/* line 55, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1.00em;
-}
-/* line 56, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em;
-}
-/* line 57, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.50em;
-}
-/* line 58, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h6 {
-  font-size: 1em;
-  font-weight: bold;
-}
-/* line 59, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p {
-  margin: 0 0 1.5em;
-}
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p .left {
-  display: inline;
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
-  padding: 0;
-}
-/* line 61, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p .right {
-  display: inline;
-  float: right;
-  margin: 1.5em 0 1.5em 1.5em;
-  padding: 0;
-}
-/* line 62, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp a {
-  text-decoration: underline;
-  color: #0066cc;
-}
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-body.bp a:visited {
-  color: #004c99;
-}
-/* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-body.bp a:focus {
-  color: #0099ff;
-}
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-body.bp a:hover {
-  color: #0099ff;
-}
-/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-body.bp a:active {
-  color: #bf00ff;
-}
-/* line 63, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp blockquote {
-  margin: 1.5em;
-  color: #666666;
-  font-style: italic;
-}
-/* line 64, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp strong, body.bp dfn {
-  font-weight: bold;
-}
-/* line 65, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp em, body.bp dfn {
-  font-style: italic;
-}
-/* line 66, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp sup, body.bp sub {
-  line-height: 0;
-}
-/* line 67, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp abbr, body.bp acronym {
-  border-bottom: 1px dotted #666666;
-}
-/* line 68, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp address {
-  margin: 0 0 1.5em;
-  font-style: italic;
-}
-/* line 69, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp del {
-  color: #666666;
-}
-/* line 70, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre {
-  margin: 1.5em 0;
-  white-space: pre;
-}
-/* line 71, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre, body.bp code, body.bp tt {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5;
-}
-/* line 72, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp li ul, body.bp li ol {
-  margin: 0;
-}
-/* line 73, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul, body.bp ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 1.5em;
-}
-/* line 74, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul {
-  list-style-type: disc;
-}
-/* line 75, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ol {
-  list-style-type: decimal;
-}
-/* line 76, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl {
-  margin: 0 0 1.5em 0;
-}
-/* line 77, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl dt {
-  font-weight: bold;
-}
-/* line 78, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dd {
-  margin-left: 1.5em;
-}
-/* line 79, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp table {
-  margin-bottom: 1.4em;
-  width: 100%;
-}
-/* line 80, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th {
-  font-weight: bold;
-}
-/* line 81, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp thead th {
-  background: #c3d9ff;
-}
-/* line 82, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th, body.bp td, body.bp caption {
-  padding: 4px 10px 4px 5px;
-}
-/* line 85, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp table.striped tr:nth-child(even) td,
-body.bp table tr.even td {
-  background: #e5ecf9;
-}
-/* line 86, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp tfoot {
-  font-style: italic;
-}
-/* line 87, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp caption {
-  background: #eeeeee;
-}
-/* line 88, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .quiet {
-  color: #666666;
-}
-/* line 89, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .loud {
-  color: #111111;
-}
-/* line 9, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clear {
-  clear: both;
-}
-/* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .nowrap {
-  white-space: nowrap;
-}
-/* line 16, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clearfix {
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .small {
-  font-size: 0.8em;
-  margin-bottom: 1.875em;
-  line-height: 1.875em;
-}
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .large {
-  font-size: 1.2em;
-  line-height: 2.5em;
-  margin-bottom: 1.25em;
-}
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .first {
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 29, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .last {
-  margin-right: 0;
-  padding-right: 0;
-}
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .top {
+
+/* line 353, ../../app/stylesheets/screen.scss */
+.formBody h2.subhead, .formBody .pseudoH2.subhead {
+  border-bottom: 1px dotted #ccc;
   margin-top: 0;
+  padding: 5px 0 2px;
+}
+
+/* line 359, ../../app/stylesheets/screen.scss */
+.formBody h3.subhead {
+  margin-top: 0;
+  padding: 5px 0 2px;
+}
+
+/* line 364, ../../app/stylesheets/screen.scss */
+.disclaimer {
+  background-color: transparent;
+  color: #888;
+  font-style: italic;
+  margin: 2px 0;
+}
+
+/* line 371, ../../app/stylesheets/screen.scss */
+.formField {
+  margin: 0;
+  padding: 16px 0 0;
+}
+
+/* line 376, ../../app/stylesheets/screen.scss */
+.formBodySingleton .formField {
+  padding-top: 8px;
+}
+
+/* line 380, ../../app/stylesheets/screen.scss */
+.formFieldCompact {
   padding-top: 0;
 }
-/* line 35, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .bottom {
+
+/* line 384, ../../app/stylesheets/screen.scss */
+.formRow label, .formField label {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 1px 0;
+  padding: 0;
+}
+
+/* line 392, ../../app/stylesheets/screen.scss */
+.formField label.optional {
+  font-weight: normal;
+}
+
+/* line 396, ../../app/stylesheets/screen.scss */
+.formField input, .formField select, .formField textarea {
+  margin: 0;
+}
+
+/* line 400, ../../app/stylesheets/screen.scss */
+.ie6 .formField select {
+  margin-top: 2px;
+}
+
+/* line 404, ../../app/stylesheets/screen.scss */
+.textField input, textarea {
+  border: 1px solid #888;
+  font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  overflow: visible;
+  padding: 4px 2px;
+}
+
+/* line 413, ../../app/stylesheets/screen.scss */
+.formattingHelp {
+  margin: 3px 0 0;
+  text-align: right;
+}
+
+/* line 418, ../../app/stylesheets/screen.scss */
+.formRow {
+  margin: 0;
+  padding: 16px 0 0;
+}
+
+/* line 423, ../../app/stylesheets/screen.scss */
+.formRow .formField {
+  float: left;
+  margin: 0;
+}
+
+/* line 428, ../../app/stylesheets/screen.scss */
+.formField .checkboxes {
+  list-style: none;
+  margin: -4px 0 0;
+  padding: 0;
+}
+
+/* line 434, ../../app/stylesheets/screen.scss */
+.formField .checkboxes li {
+  clear: both;
+  float: none;
+  margin-top: 3px;
+  padding: 0;
+}
+
+/* line 441, ../../app/stylesheets/screen.scss */
+.formField .checkboxes input {
+  margin: 0;
+}
+
+/* line 445, ../../app/stylesheets/screen.scss */
+.ie6 .formField .checkboxes input {
+  bottom: 0;
+  height: 15px;
+  overflow: hidden;
+  width: 15px;
+}
+
+/* line 452, ../../app/stylesheets/screen.scss */
+.formField .checkboxes label {
+  display: inline;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* line 458, ../../app/stylesheets/screen.scss */
+div.submit {
+  margin: 8px 0;
+}
+
+/* line 462, ../../app/stylesheets/screen.scss */
+.formBody div.submit {
+  margin: 8px 0 0;
+}
+
+/* line 466, ../../app/stylesheets/screen.scss */
+div.submit button.buttonLink, div.submit a.buttonLink {
+  margin-right: 6px;
+}
+
+/* line 470, ../../app/stylesheets/screen.scss */
+.formManagerStatus {
+  background-color: #f25d07;
+  color: #fff;
+  margin: 0;
+  padding: 3px;
+  position: absolute;
+  text-align: left;
+  width: 140px;
+  z-index: 24000;
+}
+
+/* line 481, ../../app/stylesheets/screen.scss */
+.defaultText {
+  color: #aaa;
+}
+
+/* line 485, ../../app/stylesheets/screen.scss */
+.tip {
+  display: none;
+}
+
+/* line 489, ../../app/stylesheets/screen.scss */
+.tipsContainer .tip {
+  display: block;
+}
+
+/* line 493, ../../app/stylesheets/screen.scss */
+.tipsContainer .tip .errorMessage {
+  color: #f25d07;
+}
+
+/* line 497, ../../app/stylesheets/screen.scss */
+.maxCharLength {
+  color: #f25d07;
+  font-weight: bold;
+}
+
+/* line 502, ../../app/stylesheets/screen.scss */
+.hidden {
+  display: none!important;
+}
+
+/* line 506, ../../app/stylesheets/screen.scss */
+.clearFloats {
+  overflow: auto;
+}
+
+/* line 510, ../../app/stylesheets/screen.scss */
+.clearer {
+  clear: both;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 519, ../../app/stylesheets/screen.scss */
+.smallMargins {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* line 524, ../../app/stylesheets/screen.scss */
+.ie6 .hasLayout, .ie7 .hasLayout, .ie8.hasLayout {
+  zoom: 1;
+}
+
+/* line 528, ../../app/stylesheets/screen.scss */
+.status {
+  margin: 8px 0;
+  padding: 0 5px;
+}
+
+/* line 533, ../../app/stylesheets/screen.scss */
+.status p {
+  font-size: 1.6em;
+}
+
+/* line 537, ../../app/stylesheets/screen.scss */
+#sidebar .status p {
+  font-size: 1.2em;
+}
+
+/* line 541, ../../app/stylesheets/screen.scss */
+.statusGood {
+  background-color: #fffbc5;
+  border: 1px solid #fffbc5;
+}
+
+/* line 546, ../../app/stylesheets/screen.scss */
+.statusGood, .statusGood strong {
+  color: #a6ad00;
+}
+
+/* line 550, ../../app/stylesheets/screen.scss */
+.statusGood a {
+  color: #668c9d;
+}
+
+/* line 554, ../../app/stylesheets/screen.scss */
+.statusNotice {
+  background-color: #fffbc5;
+  border: 1px solid #fffbc5;
+}
+
+/* line 559, ../../app/stylesheets/screen.scss */
+.statusNotice, .statusNotice strong {
+  color: #a6ad00;
+}
+
+/* line 563, ../../app/stylesheets/screen.scss */
+.statusNotice a {
+  color: #668c9d;
+}
+
+/* line 567, ../../app/stylesheets/screen.scss */
+.statusError {
+  background-color: #ffb699;
+  border: 1px solid #ffb699;
+}
+
+/* line 572, ../../app/stylesheets/screen.scss */
+.statusError, .statusError strong {
+  color: #fff;
+}
+
+/* line 576, ../../app/stylesheets/screen.scss */
+.statusError a {
+  color: #f25d07;
+}
+
+/* line 580, ../../app/stylesheets/screen.scss */
+input.buttonLink, button.buttonLink, a.buttonLink {
+  background: #fec965;
+  border: 1px solid #fec965;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Arial",sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.334em;
+  margin: 0;
+  moz-border-radius: 4px;
+  padding: 3px 5px 4px;
+  text-align: center;
+  webkit-border-radius: 4px;
+}
+
+/* line 597, ../../app/stylesheets/screen.scss */
+button.buttonLink {
+  line-height: 1.417em;
+  padding: 3px 6px;
+  vertical-align: top;
+}
+
+/* line 603, ../../app/stylesheets/screen.scss */
+.ie6 button.buttonLink, .ie7 button.buttonLink {
+  overflow: visible;
+  padding: 2px 6px 1px;
+  width: auto;
+}
+
+/* line 609, ../../app/stylesheets/screen.scss */
+a.buttonLink {
+  display: inline-block;
+}
+
+/* line 613, ../../app/stylesheets/screen.scss */
+button.buttonHover {
+  background: #febc3e;
+  border-color: #febc3e;
+}
+
+/* line 618, ../../app/stylesheets/screen.scss */
+input.buttonLink:hover, button.buttonLink:hover, a.buttonLink:hover {
+  background: #febc3e;
+  border-color: #febc3e;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 625, ../../app/stylesheets/screen.scss */
+a.buttonLink:visited {
+  color: #fff;
+}
+
+/* line 629, ../../app/stylesheets/screen.scss */
+a.buttonLinkMuted, button.buttonLinkMuted {
+  background: #668c9d;
+  border-color: #668c9d;
+}
+
+/* line 634, ../../app/stylesheets/screen.scss */
+a.buttonLinkMuted:hover, button.buttonLinkMuted:hover {
+  background: #52707e;
+  border-color: #52707e;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 641, ../../app/stylesheets/screen.scss */
+a.buttonLinkMuted:visited {
+  color: #fff;
+}
+
+/* line 645, ../../app/stylesheets/screen.scss */
+button.buttonLinkFocus, a.buttonLinkFocus {
+  background: #fe6f15;
+  border-color: #fe6f15;
+}
+
+/* line 650, ../../app/stylesheets/screen.scss */
+button.buttonLinkFocus:hover, a.buttonLinkFocus:hover {
+  background: #ed560a;
+  border-color: #ed560a;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 657, ../../app/stylesheets/screen.scss */
+a.buttonLinkFocus:visited {
+  color: #fff;
+}
+
+/* line 661, ../../app/stylesheets/screen.scss */
+button.buttonLinkDisabled, a.buttonLinkDisabled, button.disabledButton, a.disabledButton, a.disabledButton:hover, button.buttonLinkDisabled:hover, a.buttonLinkDisabled:hover {
+  background: #eee;
+  border-color: #eee;
+  cursor: default;
+}
+
+/* line 667, ../../app/stylesheets/screen.scss */
+.iconLink img {
+  border: none;
+  margin-bottom: -1px;
+  vertical-align: -15%;
+}
+
+/* line 673, ../../app/stylesheets/screen.scss */
+a.iconLink:hover {
+  text-decoration: none;
+}
+
+/* line 677, ../../app/stylesheets/screen.scss */
+a.iconLink:hover .iconLinkText {
+  text-decoration: underline;
+}
+
+/* line 681, ../../app/stylesheets/screen.scss */
+span.iconToggle img {
+  height: 16px;
+  width: 16px;
+}
+
+/* line 686, ../../app/stylesheets/screen.scss */
+.pagination {
+  background-color: #eee;
+  border-radius: 4px;
+  line-height: 2em;
+  margin: 3px 0;
+  moz-border-radius: 4px;
+  padding: 3px 7px;
+  text-align: center;
+  webkit-border-radius: 4px;
+}
+
+/* line 697, ../../app/stylesheets/screen.scss */
+.paginationTop {
+  margin: 0 0 8px;
+}
+
+/* line 701, ../../app/stylesheets/screen.scss */
+.paginationBottom {
+  margin: 8px 0;
+}
+
+/* line 705, ../../app/stylesheets/screen.scss */
+.pagination .left, .pagination .middle, .pagination .right {
+  margin: 0;
+}
+
+/* line 709, ../../app/stylesheets/screen.scss */
+.pagination .left {
+  float: left;
+  text-align: left;
+}
+
+/* line 714, ../../app/stylesheets/screen.scss */
+.pagination .right {
+  float: right;
+  line-height: 1.667em;
+  text-align: right;
+}
+
+/* line 720, ../../app/stylesheets/screen.scss */
+#content .pagination .middle {
+  line-height: 1.667em;
+  margin: 0 150px;
+}
+
+/* line 725, ../../app/stylesheets/screen.scss */
+#sidebar .pagination .middle {
+  margin: 0 60px;
+}
+
+/* line 729, ../../app/stylesheets/screen.scss */
+.pagination a, .pagination a:hover, .pagination a:visited {
+  color: #666;
+  font-weight: bold;
+}
+
+/* line 734, ../../app/stylesheets/screen.scss */
+.arrow {
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.388em;
+}
+
+/* line 740, ../../app/stylesheets/screen.scss */
+.ie6 .pagination .left, .ie6 .pagination .right {
+  display: inline;
+  position: relative;
+}
+
+/* line 745, ../../app/stylesheets/screen.scss */
+ul.horizontal {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 750, ../../app/stylesheets/screen.scss */
+ul.horizontal li {
+  display: inline;
+  list-style-type: none;
+}
+
+/* line 755, ../../app/stylesheets/screen.scss */
+.tabList {
+  border-bottom: 1px solid #888;
+  height: 25px;
+  list-style-type: none;
+  margin: 24px 0 8px;
+  padding: 0;
+}
+
+/* line 763, ../../app/stylesheets/screen.scss */
+.fullWidth .tabList {
+  margin-bottom: 16px;
+}
+
+/* line 767, ../../app/stylesheets/screen.scss */
+#banner .tabList, .fullWidth .tabList {
+  width: 931px;
+}
+
+/* line 771, ../../app/stylesheets/screen.scss */
+.tabList li {
+  float: left;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 5px 0 0;
+}
+
+/* line 779, ../../app/stylesheets/screen.scss */
+.tabList a, .tabList a:visited {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+  border-width: 1px 1px 0;
+  color: #aaa;
+  display: block;
+  moz-border-radius: 4px 4px 0 0;
+  padding: 0 10px;
+  webkit-border-radius: 4px 4px 0 0;
+}
+
+/* line 791, ../../app/stylesheets/screen.scss */
+.tabList a:hover {
+  color: #444;
+  text-decoration: none;
+}
+
+/* line 796, ../../app/stylesheets/screen.scss */
+.tabList a.active, .tabList a.active:hover {
+  background-color: #fff;
+  border: 1px solid #888;
+  border-bottom: 1px solid #fff;
+  color: #444;
+  font-weight: bold;
+}
+
+/* line 804, ../../app/stylesheets/screen.scss */
+ul.toggleButtons {
+  font-size: 1.2em;
+  height: 1.333em;
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 0;
+}
+
+/* line 812, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li a, ul.toggleButtons li a:visited {
+  color: #666;
+}
+
+/* line 816, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.selectedButton a, ul.toggleButtons li.selectedButton a:visited {
+  color: #fff;
+}
+
+/* line 820, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li a:hover {
+  text-decoration: none;
+}
+
+/* line 824, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li {
+  border-radius: 4px;
+  color: #666;
+  float: left;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.333em;
+  margin: 0 3px 0 0;
+  moz-border-radius: 4px;
+  padding: 0 5px;
+  webkit-border-radius: 4px;
+}
+
+/* line 837, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.label {
+  color: #ccc;
+  font-style: italic;
+  font-weight: normal;
+  margin-right: 6px;
+  padding: 0;
+}
+
+/* line 845, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.activeButton {
+  background: #eee;
+  cursor: pointer;
+}
+
+/* line 850, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.selectedButton {
+  background: #fec965;
+  color: #fff;
+}
+
+/* line 855, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.noToggle {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 860, ../../app/stylesheets/screen.scss */
+ul.toggleButtons li.noToggle a:hover {
+  text-decoration: underline;
+}
+
+/* line 864, ../../app/stylesheets/screen.scss */
+h3.toggleBar {
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: 0 0 4px 0;
+  moz-border-radius: 4px;
+  padding: 6px 4px;
+  webkit-border-radius: 4px;
+}
+
+/* line 875, ../../app/stylesheets/screen.scss */
+h3.toggleBarActive {
+  background-color: #888;
+  color: #fff;
+}
+
+/* line 880, ../../app/stylesheets/screen.scss */
+.toggleArrow {
+  cursor: pointer;
+  display: table-cell;
+  height: 8px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 8px;
+}
+
+/* line 889, ../../app/stylesheets/screen.scss */
+.arrowRight, .arrowDown {
+  border: 0 solid transparent;
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+/* line 896, ../../app/stylesheets/screen.scss */
+.arrowRight {
+  border-left-color: #666;
+  border-width: 4px 0 4px 4px;
+  margin-left: 2px;
+}
+
+/* line 902, ../../app/stylesheets/screen.scss */
+.arrowDown {
+  border-top-color: #666;
+  border-width: 4px 4px 0 4px;
+  margin-top: 2px;
+}
+
+/* line 908, ../../app/stylesheets/screen.scss */
+.column {
+  float: left;
+}
+
+/* line 912, ../../app/stylesheets/screen.scss */
+ul.column {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 918, ../../app/stylesheets/screen.scss */
+.column2 {
+  margin-left: 13px;
+  width: 290px;
+}
+
+/* line 923, ../../app/stylesheets/screen.scss */
+.column3 {
+  margin-left: 13px;
+  width: 189px;
+}
+
+/* line 928, ../../app/stylesheets/screen.scss */
+.column4 {
+  margin-left: 13px;
+  width: 138px;
+}
+
+/* line 933, ../../app/stylesheets/screen.scss */
+.column5 {
+  margin-left: 12px;
+  width: 109px;
+}
+
+/* line 938, ../../app/stylesheets/screen.scss */
+.column6 {
+  margin-left: 13px;
+  width: 88px;
+}
+
+/* line 943, ../../app/stylesheets/screen.scss */
+.fullWidth .column2 {
+  margin-left: 13px;
+  width: 459px;
+}
+
+/* line 948, ../../app/stylesheets/screen.scss */
+.fullWidth .column3 {
+  margin-left: 14px;
+  width: 301px;
+}
+
+/* line 953, ../../app/stylesheets/screen.scss */
+.fullWidth .column4 {
+  margin-left: 13px;
+  width: 223px;
+}
+
+/* line 958, ../../app/stylesheets/screen.scss */
+.fullWidth .column5 {
+  margin-left: 12px;
+  width: 175px;
+}
+
+/* line 963, ../../app/stylesheets/screen.scss */
+.fullWidth .column6 {
+  margin-left: 13px;
+  width: 143px;
+}
+
+/* line 968, ../../app/stylesheets/screen.scss */
+.firstColumn, .fullWidth .firstColumn {
+  margin-left: 0;
+}
+
+/* line 972, ../../app/stylesheets/screen.scss */
+.column li {
+  margin: 0 0 12px;
+}
+
+/* line 976, ../../app/stylesheets/screen.scss */
+.column li.lastItem {
+  margin-bottom: 0;
+}
+
+/* line 980, ../../app/stylesheets/screen.scss */
+.siteMessage {
+  background-color: #ffb699;
+  padding: 10px;
+}
+
+/* line 985, ../../app/stylesheets/screen.scss */
+.siteMessage p {
+  color: #fff;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+/* line 991, ../../app/stylesheets/screen.scss */
+#banner {
+  margin-top: 24px;
+}
+
+/* line 995, ../../app/stylesheets/screen.scss */
+#banner.empty {
+  margin: 0;
+}
+
+/* line 999, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner h1 {
+  font-size: 4.8em;
+}
+
+/* line 1003, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner .tagline {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: -8px;
+}
+
+/* line 1009, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner a {
+  font-size: 1.166em;
+  font-weight: bold;
+}
+
+/* line 1014, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner {
+  background-repeat: no-repeat;
+  height: 150px;
+  text-align: right;
+}
+
+/* line 1020, ../../app/stylesheets/screen.scss */
+#sidebarFloat {
+  float: right;
+}
+
+/* line 1024, ../../app/stylesheets/screen.scss */
+#content #sidebarFloat {
+  margin-top: -24px;
+}
+
+/* line 1028, ../../app/stylesheets/screen.scss */
+#sidebar {
+  margin-top: 24px;
+  width: 316px;
+}
+
+/* line 1033, ../../app/stylesheets/screen.scss */
+.sidebarBox {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 0;
+  moz-border-radius: 4px;
+  padding: 1px 7px 7px;
+  webkit-border-radius: 4px;
+}
+
+/* line 1043, ../../app/stylesheets/screen.scss */
+#sidebar .sidebarBox {
+  margin: 8px 0 8px;
+}
+
+/* line 1047, ../../app/stylesheets/screen.scss */
+#sidebar .sidebarBox h3 {
+  margin-bottom: 8px;
+}
+
+/* line 1051, ../../app/stylesheets/screen.scss */
+.sidebarBox .last {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 25, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
-body.bp .showgrid {
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 0% 50%, 960 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(3.125%, rgba(100, 100, 225, 0.25)), color-stop(3.125%, rgba(0, 0, 0, 0)), color-stop(4.167%, rgba(0, 0, 0, 0)), color-stop(4.167%, rgba(100, 100, 225, 0.25)), color-stop(7.292%, rgba(100, 100, 225, 0.25)), color-stop(7.292%, rgba(0, 0, 0, 0)), color-stop(8.333%, rgba(0, 0, 0, 0)), color-stop(8.333%, rgba(100, 100, 225, 0.25)), color-stop(11.458%, rgba(100, 100, 225, 0.25)), color-stop(11.458%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(100, 100, 225, 0.25)), color-stop(15.625%, rgba(100, 100, 225, 0.25)), color-stop(15.625%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(100, 100, 225, 0.25)), color-stop(19.792%, rgba(100, 100, 225, 0.25)), color-stop(19.792%, rgba(0, 0, 0, 0)), color-stop(20.833%, rgba(0, 0, 0, 0)), color-stop(20.833%, rgba(100, 100, 225, 0.25)), color-stop(23.958%, rgba(100, 100, 225, 0.25)), color-stop(23.958%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(100, 100, 225, 0.25)), color-stop(28.125%, rgba(100, 100, 225, 0.25)), color-stop(28.125%, rgba(0, 0, 0, 0)), color-stop(29.167%, rgba(0, 0, 0, 0)), color-stop(29.167%, rgba(100, 100, 225, 0.25)), color-stop(32.292%, rgba(100, 100, 225, 0.25)), color-stop(32.292%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(100, 100, 225, 0.25)), color-stop(36.458%, rgba(100, 100, 225, 0.25)), color-stop(36.458%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(100, 100, 225, 0.25)), color-stop(40.625%, rgba(100, 100, 225, 0.25)), color-stop(40.625%, rgba(0, 0, 0, 0)), color-stop(41.667%, rgba(0, 0, 0, 0)), color-stop(41.667%, rgba(100, 100, 225, 0.25)), color-stop(44.792%, rgba(100, 100, 225, 0.25)), color-stop(44.792%, rgba(0, 0, 0, 0)), color-stop(45.833%, rgba(0, 0, 0, 0)), color-stop(45.833%, rgba(100, 100, 225, 0.25)), color-stop(48.958%, rgba(100, 100, 225, 0.25)), color-stop(48.958%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(53.125%, rgba(100, 100, 225, 0.25)), color-stop(53.125%, rgba(0, 0, 0, 0)), color-stop(54.167%, rgba(0, 0, 0, 0)), color-stop(54.167%, rgba(100, 100, 225, 0.25)), color-stop(57.292%, rgba(100, 100, 225, 0.25)), color-stop(57.292%, rgba(0, 0, 0, 0)), color-stop(58.333%, rgba(0, 0, 0, 0)), color-stop(58.333%, rgba(100, 100, 225, 0.25)), color-stop(61.458%, rgba(100, 100, 225, 0.25)), color-stop(61.458%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(100, 100, 225, 0.25)), color-stop(65.625%, rgba(100, 100, 225, 0.25)), color-stop(65.625%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(100, 100, 225, 0.25)), color-stop(69.792%, rgba(100, 100, 225, 0.25)), color-stop(69.792%, rgba(0, 0, 0, 0)), color-stop(70.833%, rgba(0, 0, 0, 0)), color-stop(70.833%, rgba(100, 100, 225, 0.25)), color-stop(73.958%, rgba(100, 100, 225, 0.25)), color-stop(73.958%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(100, 100, 225, 0.25)), color-stop(78.125%, rgba(100, 100, 225, 0.25)), color-stop(78.125%, rgba(0, 0, 0, 0)), color-stop(79.167%, rgba(0, 0, 0, 0)), color-stop(79.167%, rgba(100, 100, 225, 0.25)), color-stop(82.292%, rgba(100, 100, 225, 0.25)), color-stop(82.292%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(100, 100, 225, 0.25)), color-stop(86.458%, rgba(100, 100, 225, 0.25)), color-stop(86.458%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(100, 100, 225, 0.25)), color-stop(90.625%, rgba(100, 100, 225, 0.25)), color-stop(90.625%, rgba(0, 0, 0, 0)), color-stop(91.667%, rgba(0, 0, 0, 0)), color-stop(91.667%, rgba(100, 100, 225, 0.25)), color-stop(94.792%, rgba(100, 100, 225, 0.25)), color-stop(94.792%, rgba(0, 0, 0, 0)), color-stop(95.833%, rgba(0, 0, 0, 0)), color-stop(95.833%, rgba(100, 100, 225, 0.25)), color-stop(98.958%, rgba(100, 100, 225, 0.25)), color-stop(98.958%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
-  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
-  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
-  -moz-background-size: 100% 18px, auto;
-  -webkit-background-size: 100% 18px, auto;
-  -o-background-size: 100% 18px, auto;
-  background-size: 100% 18px, auto;
-  background-position: left top;
-}
-/* line 4, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .feedback, body.bp .error, body.bp .alert, body.bp .notice, body.bp .success, body.bp .info {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-}
-/* line 5, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error, body.bp .alert {
-  background: #fbe3e4;
-  color: #8a1f11;
-  border-color: #fbc2c4;
-}
-/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error a, body.bp .alert a {
-  color: #8a1f11;
-}
-/* line 7, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice {
-  background: #fff6bf;
-  color: #514721;
-  border-color: #ffd324;
-}
-/* line 36, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice a {
-  color: #514721;
-}
-/* line 8, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success {
-  background: #e6efc2;
-  color: #264409;
-  border-color: #c6d880;
-}
-/* line 45, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success a {
-  color: #264409;
-}
-/* line 9, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .info {
-  background: #d5edf8;
-  color: #205791;
-  border-color: #92cae4;
-}
-/* line 54, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .info a {
-  color: #205791;
-}
-/* line 10, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .hide {
-  display: none;
-}
-/* line 11, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .highlight {
-  background: yellow;
-}
-/* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .added {
-  background: #006600;
-  color: white;
-}
-/* line 13, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .removed {
-  background: #990000;
-  color: white;
+
+/* line 1056, ../../app/stylesheets/screen.scss */
+.sidebarBoxMain {
+  background-color: #eee;
+  border: none;
 }
 
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp label {
-  font-weight: bold;
+/* line 1061, ../../app/stylesheets/screen.scss */
+.sidebarBoxTwoTier {
+  background-color: #eee;
+  border-width: 0;
 }
-/* line 19, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
-}
-/* line 20, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp legend {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
-}
-/* line 27, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.title {
-  font-size: 1.5em;
-}
-/* line 29, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp select {
-  margin: 0.5em 0;
-}
-/* line 55, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  border: 1px solid #cccccc;
-}
-/* line 58, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password],
-form.bp textarea {
+
+/* line 1066, ../../app/stylesheets/screen.scss */
+#sidebar .sidebarBoxTwoTier {
   background-color: #fff;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  padding: 1px 7px 0;
+  webkit-border-radius: 4px;
 }
-/* line 61, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=email]:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
-form.bp textarea:focus {
-  border-color: #666666;
-}
-/* line 65, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp select {
+
+/* line 1075, ../../app/stylesheets/screen.scss */
+.sidebarBoxTwoTier .interior {
   background-color: #fff;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #ddd;
+  padding: 7px 7px 0;
 }
-/* line 44, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
+
+/* line 1081, ../../app/stylesheets/screen.scss */
+#sidebar .sidebarBoxTwoTier .interior {
+  border: none;
+  padding: 0;
+}
+
+/* line 1086, ../../app/stylesheets/screen.scss */
+.ie6 #guideBottomColumns .sidebarBoxTwoTier .interior {
+  width: 271px;
+}
+
+/* line 1090, ../../app/stylesheets/screen.scss */
+.ie6 #sidebar .sidebarBoxTwoTier .interior {
   width: 300px;
 }
-/* line 46, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  width: 390px;
-  height: 250px;
+
+/* line 1094, ../../app/stylesheets/screen.scss */
+#sidebar .formBody {
+  margin: 8px 0;
 }
-/* line 39, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
+
+/* line 1098, ../../app/stylesheets/screen.scss */
+#sidebarEditNav ul {
+  background-color: #eee;
+  border-radius: 4px;
+  height: 2.6em;
+  list-style: none;
+  margin: 0;
+  moz-border-radius: 4px;
+  padding: 0;
+  webkit-border-radius: 4px;
 }
-/* line 42, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #dddddd;
+
+/* line 1109, ../../app/stylesheets/screen.scss */
+#sidebarEditNav li {
+  display: block;
+  float: left;
+  line-height: 2.167em;
+  text-align: center;
+  width: 33.33%;
 }
-/* line 45, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #dddddd;
+
+/* line 1117, ../../app/stylesheets/screen.scss */
+#sidebarEditNav li a {
+  display: block;
+  height: 100%;
 }
-/* line 47, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp hr {
-  background: #dddddd;
-  color: #dddddd;
+
+/* line 1122, ../../app/stylesheets/screen.scss */
+#sidebarEditNav a, #sidebarEditNav a:hover, #sidebarEditNav a:visited {
+  color: #666;
+}
+
+/* line 1126, ../../app/stylesheets/screen.scss */
+#sidebarEditNav li.activeNav a {
+  font-weight: bold;
+}
+
+/* line 1130, ../../app/stylesheets/screen.scss */
+.sidebarBlurb {
+  border-bottom: 1px dotted #ddd;
   clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
+  margin: 0 0 7px;
+  overflow: hidden;
+  padding-bottom: 7px;
 }
-/* line 49, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-  background: white;
-  color: white;
-  visibility: hidden;
-}
-/* line 51, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp form.inline {
-  line-height: 3;
-}
-/* line 6, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp form.inline p {
+
+/* line 1138, ../../app/stylesheets/screen.scss */
+.sidebarBlurbLast {
+  border-bottom: none;
   margin-bottom: 0;
 }
 
-/* line 36, ../../app/stylesheets/screen.scss */
-body.two-col #container {
-  width: 950px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
+/* line 1143, ../../app/stylesheets/screen.scss */
+.sidebarBlurb .blurbImage {
+  float: right;
 }
-/* line 38, ../../app/stylesheets/screen.scss */
-body.two-col #header, body.two-col #footer {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #header, * html body.two-col #footer {
-  overflow-x: hidden;
-}
-/* line 40, ../../app/stylesheets/screen.scss */
-body.two-col #sidebar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-}
-/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #sidebar {
-  overflow-x: hidden;
-}
-/* line 44, ../../app/stylesheets/screen.scss */
-body.two-col #content {
-  display: inline;
-  float: left;
+
+/* line 1147, ../../app/stylesheets/screen.scss */
+.sidebarBoxTwoTier .blurbImage {
+  border: none;
   margin-right: 0;
-  width: 630px;
 }
-/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #content {
+
+/* line 1152, ../../app/stylesheets/screen.scss */
+.sidebarBlurb .blurbImageCentered a {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 41px;
+  width: 41px;
+}
+
+/* line 1161, ../../app/stylesheets/screen.scss */
+.sidebarBlurb .blurbText {
+  margin-right: 64px;
+}
+
+/* line 1165, ../../app/stylesheets/screen.scss */
+.sidebarBlurb h4 {
+  font-size: 1.2em;
+  line-height: 1.334em;
+  margin: 0;
+}
+
+/* line 1171, ../../app/stylesheets/screen.scss */
+.sidebarBlurb .blurbText p {
+  line-height: 1.334em;
+  margin: 0;
+}
+
+/* line 1176, ../../app/stylesheets/screen.scss */
+#contentFloat {
+  float: left;
+}
+
+/* line 1180, ../../app/stylesheets/screen.scss */
+.fullWidth #contentFloat {
+  float: none;
+}
+
+/* line 1184, ../../app/stylesheets/screen.scss */
+#content {
+  margin-top: 24px;
+  width: 593px;
+}
+
+/* line 1189, ../../app/stylesheets/screen.scss */
+.fullWidth #content {
+  width: 933px;
+}
+
+/* line 1193, ../../app/stylesheets/screen.scss */
+#bodyTop {
+  margin-top: 24px;
+}
+
+/* line 1197, ../../app/stylesheets/screen.scss */
+#content .formBody .fullWidth {
+  width: 571px;
+}
+
+/* line 1201, ../../app/stylesheets/screen.scss */
+#content .formBody .twoThirdsWidthField, #content .formBody .twoThirdsWidth {
+  width: 364px;
+}
+
+/* line 1205, ../../app/stylesheets/screen.scss */
+#content .formBody .twoThirdsWidthField textarea, #content .formBody .twoThirdsWidthTextField input, #content .formBody .textField input.twoThirdsWidth, #content .formBody .formField textarea.twoThirdsWidth {
+  width: 358px;
+}
+
+/* line 1209, ../../app/stylesheets/screen.scss */
+#background {
+  background-color: #eee;
+  padding: 0 0 24px;
+}
+
+/* line 1214, ../../app/stylesheets/screen.scss */
+#main {
+  margin: 0 auto;
+  width: 981px;
+}
+
+/* line 1219, ../../app/stylesheets/screen.scss */
+#mainBody {
+  background-color: #fff;
+  border-radius: 8px;
+  moz-border-radius: 8px;
+  overflow: auto;
+  padding: 0 24px 24px;
+  text-align: left;
+  webkit-border-radius: 8px;
+}
+
+/* line 1229, ../../app/stylesheets/screen.scss */
+#mainBody.hasSideNav {
+  float: right;
+  width: 793px;
+}
+
+/* line 1234, ../../app/stylesheets/screen.scss */
+#mainBody.hasSideNav.fullWidth #content {
+  width: 793px;
+}
+
+/* line 1238, ../../app/stylesheets/screen.scss */
+#mainSideNav {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0 0;
+  width: 140px;
+}
+
+/* line 1246, ../../app/stylesheets/screen.scss */
+#mainSideNav li {
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1.714em;
+  margin: 0;
+  padding-left: 5px;
+  text-align: left;
+}
+
+/* line 1255, ../../app/stylesheets/screen.scss */
+#mainSideNav li.active {
+  background-color: #ccc;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+/* line 1261, ../../app/stylesheets/screen.scss */
+#mainSideNav li.active a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 1266, ../../app/stylesheets/screen.scss */
+#footer {
+  clear: both;
+  margin: 0 auto;
+  padding: 0 0 80px;
+  position: relative;
+  text-align: left;
+  width: 941px;
+}
+
+/* line 1275, ../../app/stylesheets/screen.scss */
+#footerBasic {
+  margin: 0 auto;
+  padding-bottom: 80px;
+  text-align: center;
+  width: 941px;
+}
+
+/* line 1282, ../../app/stylesheets/screen.scss */
+#footer #footerBasic {
+  padding: 20px 0 0;
+}
+
+/* line 1286, ../../app/stylesheets/screen.scss */
+#footerBasic ul {
+  margin-bottom: 8px;
+}
+
+/* line 1290, ../../app/stylesheets/screen.scss */
+#footerBasic li {
+  margin: 0 6px;
+}
+
+/* line 1294, ../../app/stylesheets/screen.scss */
+#footerBasic li, #footerBasic a {
+  color: #668c9d;
+}
+
+/* line 1298, ../../app/stylesheets/screen.scss */
+#footerBasic ul.muted li, #footerBasic ul.muted li a, #footerBasic ul.muted li a:visited {
+  color: #aaa;
+}
+
+/* line 1302, ../../app/stylesheets/screen.scss */
+#footer h2 {
+  border-bottom-color: #ccc;
+  color: #aaa;
+  margin-top: 0;
+}
+
+/* line 1308, ../../app/stylesheets/screen.scss */
+#whyBuyFooter {
+  float: left;
+  width: 735px;
+}
+
+/* line 1313, ../../app/stylesheets/screen.scss */
+#footer .footerBlurb {
+  background-image: url(http://static.ifixit.net/static/images/ifixit/footer_icons_eee.gif);
+  background-repeat: no-repeat;
+  float: left;
+  width: 360px;
+}
+
+/* line 1320, ../../app/stylesheets/screen.scss */
+#whyBuyFree {
+  background-position: 0 13px;
+}
+
+/* line 1324, ../../app/stylesheets/screen.scss */
+#whyBuyEnvironment {
+  background-position: 0 -131px;
+}
+
+/* line 1328, ../../app/stylesheets/screen.scss */
+#whyBuySecurity {
+  background-position: 0 -275px;
+}
+
+/* line 1332, ../../app/stylesheets/screen.scss */
+#whyBuySupport {
+  background-position: 0 -419px;
+}
+
+/* line 1336, ../../app/stylesheets/screen.scss */
+#whyBuyTeach {
+  background-position: 0 -563px;
+}
+
+/* line 1340, ../../app/stylesheets/screen.scss */
+#whyBuyParts {
+  background-position: 0 -707px;
+}
+
+/* line 1344, ../../app/stylesheets/screen.scss */
+#whyBuySecurity, #whyBuyFree, #whyBuyTeach {
+  margin-right: 15px;
+}
+
+/* line 1348, ../../app/stylesheets/screen.scss */
+#footer .footerBlurb p {
+  margin: 10px 0 10px 46px;
+}
+
+/* line 1352, ../../app/stylesheets/screen.scss */
+#footer strong.title {
+  color: #666;
+  font-size: 1.167em;
+  padding-right: 4px;
+}
+
+/* line 1358, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule {
+  border-left: none;
+  float: left;
+  margin: 0 0 0 16px;
+  width: 177px;
+}
+
+/* line 1365, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+/* line 1371, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule li {
+  font-size: 1.4em;
+}
+
+/* line 1375, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule h3 {
+  font-size: 1.2em;
+  margin: 5px 0 0 0;
+}
+
+/* line 1380, ../../app/stylesheets/screen.scss */
+#newsletterMsg {
+  margin: 5px 0;
+}
+
+/* line 1384, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule .emailInputFrame input {
+  margin: 5px 0;
+  width: 172px;
+}
+
+/* line 1389, ../../app/stylesheets/screen.scss */
+#footerBasic li, #footerBasic a {
+  color: #336da8;
+}
+
+/* line 1393, ../../app/stylesheets/screen.scss */
+#footer ul.muted li, #footer ul.muted a {
+  color: #aaa;
+}
+
+/* line 1397, ../../app/stylesheets/screen.scss */
+::selection, ::-moz-selection {
+  background-color: #febc3e;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 1403, ../../app/stylesheets/screen.scss */
+#mainBody {
+  border-radius: 0;
+  box-shadow: 0 0 6px #ccc;
+  moz-border-radius: 0;
+  moz-box-shadow: 0 0 6px #ccc;
+  webkit-border-radius: 0;
+  webkit-box-shadow: 0 0 6px #ccc;
+}
+
+/* line 1412, ../../app/stylesheets/screen.scss */
+#mainBody.hidePageEffect {
+  background-color: transparent;
+  box-shadow: none;
+  moz-box-shadow: none;
+  webkit-box-shadow: none;
+}
+
+/* line 1419, ../../app/stylesheets/screen.scss */
+html, body {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+/* line 1423, ../../app/stylesheets/screen.scss */
+h1, h2, .pseudoH2, h3, .pseudoH3 {
+  font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+}
+
+/* line 1427, ../../app/stylesheets/screen.scss */
+h4, .pseudoH4, h5, .pseudoH5, h6, .pseudoH6 {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+/* line 1431, ../../app/stylesheets/screen.scss */
+input.buttonLink, button.buttonLink, a.buttonLink, a.buttonLinkFocus, a.buttonLinkMuted {
+  font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+}
+
+/* line 1435, ../../app/stylesheets/screen.scss */
+ul.toggleButtons, .storeList a.topLevel span, .stripStep, .selectedBlurbText h3 {
+  font-family: "Ubuntu",Helvetica,Arial,sans-serif;
+}
+
+/* line 1439, ../../app/stylesheets/screen.scss */
+.productLinkContainer h3 a, .carouselDiv h4, #questions .questionTitle h3, h2.productHeader, .productOptionDetails h3, #productOverview h2, .productDetails h3, #relatedProductsDiv h2, .stripStep span {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+/* line 1443, ../../app/stylesheets/screen.scss */
+input.buttonLink, button.buttonLink, a.buttonLink, a.buttonLinkFocus, a.buttonLinkMuted {
+  background: #fec965;
+  background: linear-gradient(top, #fec965 0%, #febc3e 100%);
+  background: -moz-linear-gradient(top, #fec965 0, #febc3e 100%);
+  background: -ms-linear-gradient(top, #fec965 0, #febc3e 100%);
+  background: -o-linear-gradient(top, #fec965 0, #febc3e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fec965), color-stop(100%, #febc3e));
+  background: -webkit-linear-gradient(top, #fec965 0, #febc3e 100%);
+  border: 1px solid #eda42e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fec965',endColorstr='#febc3e',GradientType=0);
+  text-shadow: 0 -1px 0 #eda42e;
+}
+
+/* line 1456, ../../app/stylesheets/screen.scss */
+input.buttonLink:hover, button.buttonHover, button.buttonLink:hover, a.buttonLink:hover {
+  background: #febc3e;
+  background: linear-gradient(top, #febc3e 0%, #eda42e 100%);
+  background: -moz-linear-gradient(top, #febc3e 0, #eda42e 100%);
+  background: -ms-linear-gradient(top, #febc3e 0, #eda42e 100%);
+  background: -o-linear-gradient(top, #febc3e 0, #eda42e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #febc3e), color-stop(100%, #eda42e));
+  background: -webkit-linear-gradient(top, #febc3e 0, #eda42e 100%);
+  border-color: #eda42e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#febc3e',endColorstr='#eda42e',GradientType=0);
+}
+
+/* line 1468, ../../app/stylesheets/screen.scss */
+button.buttonLinkFocus, a.buttonLinkFocus {
+  background: #fe6f15;
+  background: linear-gradient(top, #fe8c44 0%, #fe6f15 100%);
+  background: -moz-linear-gradient(top, #fe8c44 0, #fe6f15 100%);
+  background: -ms-linear-gradient(top, #fe8c44 0, #fe6f15 100%);
+  background: -o-linear-gradient(top, #fe8c44 0, #fe6f15 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe8c44), color-stop(100%, #fe6f15));
+  background: -webkit-linear-gradient(top, #fe8c44 0, #fe6f15 100%);
+  border-color: #fe6f15;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe8c44',endColorstr='#fe6f15',GradientType=0);
+  text-shadow: 0 -1px 0 #ed560a;
+}
+
+/* line 1481, ../../app/stylesheets/screen.scss */
+button.buttonLinkFocus:hover, a.buttonLinkFocus:hover {
+  background: #ed560a;
+  background: linear-gradient(top, #fe6f15 0%, #ed560a 100%);
+  background: -moz-linear-gradient(top, #fe6f15 0, #ed560a 100%);
+  background: -ms-linear-gradient(top, #fe6f15 0, #ed560a 100%);
+  background: -o-linear-gradient(top, #fe6f15 0, #ed560a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe6f15), color-stop(100%, #ed560a));
+  background: -webkit-linear-gradient(top, #fe6f15 0, #ed560a 100%);
+  border-color: #ed560a;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe6f15',endColorstr='#ed560a',GradientType=0);
+}
+
+/* line 1493, ../../app/stylesheets/screen.scss */
+a.buttonLinkMuted, button.buttonLinkMuted {
+  background: #668c9d;
+  background: linear-gradient(top, #85a3b1 0%, #668c9d 100%);
+  background: -moz-linear-gradient(top, #85a3b1 0, #668c9d 100%);
+  background: -ms-linear-gradient(top, #85a3b1 0, #668c9d 100%);
+  background: -o-linear-gradient(top, #85a3b1 0, #668c9d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #85a3b1), color-stop(100%, #668c9d));
+  background: -webkit-linear-gradient(top, #85a3b1 0, #668c9d 100%);
+  border-color: #668c9d;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#85a3b1',endColorstr='#668c9d',GradientType=0);
+  text-shadow: 0 -1px 0 #52707e;
+}
+
+/* line 1506, ../../app/stylesheets/screen.scss */
+a.buttonLinkMuted:hover, button.buttonLinkMuted:hover {
+  background: #52707e;
+  background: linear-gradient(top, #668c9d 0%, #52707e 100%);
+  background: -moz-linear-gradient(top, #668c9d 0, #52707e 100%);
+  background: -ms-linear-gradient(top, #668c9d 0, #52707e 100%);
+  background: -o-linear-gradient(top, #668c9d 0, #52707e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #668c9d), color-stop(100%, #52707e));
+  background: -webkit-linear-gradient(top, #668c9d 0, #52707e 100%);
+  border-color: #52707e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668c9d',endColorstr='#52707e',GradientType=0);
+}
+
+/* line 1518, ../../app/stylesheets/screen.scss */
+a.buttonLinkDisabled, button.buttonLinkDisabled, a.buttonLinkDisabled:hover, button.buttonLinkDisabled:hover {
+  background: #eee;
+  background: linear-gradient(top, #fafafa 0%, #eeeeee 100%);
+  background: -moz-linear-gradient(top, #fafafa 0, #eeeeee 100%);
+  background: -ms-linear-gradient(top, #fafafa 0, #eeeeee 100%);
+  background: -o-linear-gradient(top, #fafafa 0, #eeeeee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #eeeeee));
+  background: -webkit-linear-gradient(top, #fafafa 0, #eeeeee 100%);
+  border-color: #ccc;
+  color: #ccc;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eeeeee',GradientType=0);
+  text-shadow: 0 1px 0 #fff;
+}
+
+/*#***   Start file:  base.css                       ***#*/
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbTitle {
+  margin: 0 0 0 64px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbThumbnail .blurbTitle {
+  margin-left: 104px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbImage {
+  float: left;
+  margin: 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbImage img {
+  display: block;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.noBorder {
+  border: none!important;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbThumbnail, .blurbThumbnailAvatar, .blurbMini, .blurbMiniAvatar {
+  overflow: hidden;
+  margin: 8px 0 0 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbThumbnail, .blurbThumbnailAvatar {
+  height: 56px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbMini, .blurbMiniAvatar {
+  height: 44px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbMini img {
+  width: 56px;
+  height: 42px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.blurbMiniBG .blurbImage a {
+  display: block;
+  width: 56px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCard {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCardHorizontal {
+  margin-top: 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCard img, .userCard a:hover img {
+  border: 1px solid #ddd;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCardHorizontal img {
+  float: left;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCard p {
+  margin: 0 0 4px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCardHorizontal p {
+  margin-left: 64px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCardName a {
+  font-weight: bold;
+  font-size: 1.167em;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.userCardScore {
+  color: #444;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badgeContainer {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badge, .badge:visited {
+  border: 1px solid #eee;
+  cursor: pointer;
+  display: inline;
+  line-height: 2.4em;
+  padding: 5px 8px 5px 25px;
+  color: #666;
+  background-color: #eee;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-image: url(http://static.ifixit.net/static/images/badge_icons_20110608.png);
+  background-repeat: no-repeat;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badgeContainer .gold {
+  background-position: 5px 4px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badgeContainer .silver {
+  background-position: 5px -26px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badgeContainer .bronze {
+  background-position: 5px -56px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badge:hover {
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #666;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+.badgeCounter, .badgeCounter:visited, .badgeCounter:hover {
+  color: #aaa;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#background {
+  background-color: #eee;
+  padding: 0 0 24px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer {
+  position: relative;
+  clear: both;
+  width: 941px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+  text-align: left;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic {
+  width: 941px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer #footerBasic {
+  padding: 20px 0 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic ul {
+  margin-bottom: 8px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic li {
+  margin: 0 6px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic li, #footerBasic a {
+  color: #668c9d;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic ul.muted li, #footerBasic ul.muted li a, #footerBasic ul.muted li a:visited {
+  color: #aaa;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer h2 {
+  margin-top: 0;
+  border-bottom-color: #ccc;
+  color: #aaa;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuyFooter {
+  width: 735px;
+  float: left;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer .footerBlurb {
+  width: 360px;
+  float: left;
+  background-image: url(http://static.ifixit.net/static/images/ifixit/footer_icons_eee.gif);
+  background-repeat: no-repeat;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuyFree {
+  background-position: 0 13px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuyEnvironment {
+  background-position: 0 -131px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuySecurity {
+  background-position: 0 -275px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuySupport {
+  background-position: 0 -419px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuyTeach {
+  background-position: 0 -563px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuyParts {
+  background-position: 0 -707px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#whyBuySecurity, #whyBuyFree, #whyBuyTeach {
+  margin-right: 15px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer .footerBlurb p {
+  margin: 10px 0 10px 46px;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer strong.title {
+  padding-right: 4px;
+  font-size: 1.167em;
+  color: #666;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule {
+  float: left;
+  width: 177px;
+  margin: 0 0 0 16px;
+  border-left: none;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule li {
+  font-size: 1.4em;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule h3 {
+  margin: 5px 0 0 0;
+  font-size: 1.2em;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterMsg {
+  margin: 5px 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#newsletterFrameModule .emailInputFrame input {
+  width: 172px;
+  margin: 5px 0;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footerBasic li, #footerBasic a {
+  color: #336da8;
+}
+
+/* line 1532, ../../app/stylesheets/screen.scss */
+#footer ul.muted li, #footer ul.muted a {
+  color: #aaa;
+}
+
+/*#***   Start file:  Shared/tooltips.css            ***#*/
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .content {
+  margin: 5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .ctl, .tooltip .ctr, .tooltip .cbl, .tooltip .cbr {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url(http://static.ifixit.net/static/images/icons/tooltip_sprite.png);
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .ctl {
+  background-position: 0 0;
+  top: -5px;
+  left: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .ctr {
+  background-position: -10px 0;
+  top: -5px;
+  right: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .cbr {
+  background-position: -10px -10px;
+  bottom: -5px;
+  right: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .cbl {
+  background-position: 0 -10px;
+  bottom: -5px;
+  left: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .et, .tooltip .eb {
+  position: absolute;
+  background-image: url(http://static.ifixit.net/static/images/icons/tooltip_sprite.png);
+  height: 5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .el, .tooltip .er {
+  position: absolute;
+  background-image: url(http://static.ifixit.net/static/images/icons/tooltip_sprite.png);
+  width: 5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .et {
+  background-position: -40px -25px;
+  top: -5px;
+  left: 5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .eb {
+  background-position: -40px -35px;
+  bottom: -5px;
+  left: 5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .er {
+  background-position: -35px -40px;
+  top: 5px;
+  right: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip .el {
+  background-position: -25px -40px;
+  top: 5px;
+  left: -5px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip-at, .tooltip-ar, .tooltip-ab, .tooltip-al {
+  background-image: url(http://static.ifixit.net/static/images/icons/tooltip_sprite.png);
+  position: absolute;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip-at {
+  background-position: 0 -55px;
+  width: 19px;
+  height: 10px;
+  margin: 0 3px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip-ar {
+  background-position: 0 -94px;
+  width: 10px;
+  height: 19px;
+  margin: 3px 0;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip-ab {
+  background-position: 0 -40px;
+  width: 19px;
+  height: 10px;
+  margin: 0 3px;
+}
+
+/* line 1534, ../../app/stylesheets/screen.scss */
+.tooltip-al {
+  background-position: 0 -70px;
+  width: 10px;
+  height: 19px;
+  margin: 3px 0;
+}
+
+/*#***   Start file:  Shared/modal.css               ***#*/
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalBox {
+  position: absolute;
+  border: 8px solid #666;
+  background-color: #FFF;
+  z-index: 10000;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalContentBox {
+  text-align: left;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalLoading {
+  background: url(http://static.ifixit.net/static/images/modal/loader.gif) no-repeat center;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalCloseBtn {
+  position: absolute;
+  top: -19px;
+  right: -19px;
+  z-index: 10002;
+  background: url(http://static.ifixit.net/static/images/modal/close.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.loading {
+  position: absolute;
+  text-align: center;
+  z-index: 10001;
+  background: url(http://static.ifixit.net/static/images/modal/spinner.gif) no-repeat;
+  background-position: bottom center;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.loading .message {
+  margin: 0 0 40px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.loading .subMessage {
+  margin: -35px 0 40px 0;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalMessage {
+  width: 350px;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalMessageText {
+  margin: 0;
+  padding: 8px 8px 8px;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalMessageButtons {
+  margin: 0;
+  padding: 0 8px 8px 8px;
+  text-align: right;
+}
+
+/* line 1536, ../../app/stylesheets/screen.scss */
+.modalMessageButtons button {
+  margin: 8px 0 0 10px;
+}
+
+/*#***   Start file:  FrameModules/Login/login.css   ***#*/
+/* line 1538, ../../app/stylesheets/screen.scss */
+#login {
+  margin: 20px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#login form {
+  position: relative;
+  width: 388px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#login .submit button {
+  margin-left: 0;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#otherOptions {
+  float: right;
+  width: 160px;
+  margin: 14px 0 0 0;
+  border-left: 8px solid #ecf8fe;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#otherOptions ul {
+  margin: 8px 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#otherOptions li {
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#otherOptions li a {
+  display: block;
+  height: 100%;
+  border: 1px solid #c6caca;
+  padding: 4px 4px 4px 30px;
+  background-repeat: no-repeat;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#googleLogin a {
+  background-image: url(http://static.ifixit.net/static/images/icons/google.gif);
+  background-position: 4px center;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#yahooLogin a {
+  background-image: url(http://static.ifixit.net/static/images/icons/yahoo.png);
+  background-position: 1px center;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#login .textField input {
+  width: 134px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#login .textField #Ecom_BillTo_Online_Email_Login {
+  width: 168px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#haveAccountField .prompt {
+  margin: 10px 0 4px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#haveAccountField li {
+  font-size: 1.4em;
+  margin: 6px 0;
+  line-height: 1em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#loginBtn, #joinUsBtn {
+  width: 6em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#forgotBtn {
+  width: 12em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#registerFormDiv form {
+  width: 369px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#registerForm .tipsContainer {
+  float: right;
+  width: 206px;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#termsAgreeField label {
+  margin-left: 5px;
+  line-height: 1.333em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#termsAgreeField {
+  margin: 8px 0 16px;
+  height: 3em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#termsRequired {
+  color: #f25d07;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+#registerBtn {
+  width: 6em;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+.avatarSelector {
+  width: 96px;
+  margin: 0 43px 0 0;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+.ie6 .avatarSelector {
+  display: inline;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+.imageField {
+  width: 96px;
+  height: 96px;
+  margin-top: 3px;
+  border: 1px dashed #a9a9a9;
+  text-align: center;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+.avatarSelector p.cycleImage {
+  margin: 5px 0 0 0;
+  padding: 2px;
+  background-color: #ffc;
+  text-align: center;
+}
+
+/* line 1538, ../../app/stylesheets/screen.scss */
+.cycleImage a {
+  color: #f47d1c;
+  font-weight: bold;
+}
+
+/*#***   Start file:  Shared/notify.css              ***#*/
+/* line 1540, ../../app/stylesheets/screen.scss */
+#notifications {
+  background-color: #fef3d8;
+  width: 100%;
+  z-index: 1100;
+  border: solid #febc3e;
+  border-width: 0 0 2px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 1540, ../../app/stylesheets/screen.scss */
+.notification {
+  width: 947px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: inherit;
+}
+
+/* line 1540, ../../app/stylesheets/screen.scss */
+.notification .timesince {
+  font-size: .5em;
+}
+
+/* line 1540, ../../app/stylesheets/screen.scss */
+#notifications .close {
+  font-size: 1.1em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+/* line 1540, ../../app/stylesheets/screen.scss */
+.deleteButton a, .deleteButton a:visited {
+  text-align: center;
+  color: white!important;
+}
+
+/*#***   Start file:  Shared/header.css              ***#*/
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header {
+  height: 40px;
+  min-width: 981px;
+  margin-bottom: 24px;
+  background-color: #336da8;
+  text-align: center;
+  font-family: "Arial",sans-serif;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerContent {
+  position: relative;
+  width: 981px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header h1 {
+  float: left;
+  margin: 7px 0 0 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header h1 a {
+  display: block;
+  width: 79px;
+  height: 22px;
+  text-indent: -99999px;
+  background-image: url(http://static.ifixit.net/static/images/nano/logo.gif);
+  background-repeat: no-repeat;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header h1 img {
+  border: none;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#searchForm div {
+  position: relative;
+  float: left;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#searchForm #searchSubmit {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  right: 0;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#searchForm #searchBox {
+  float: left;
+  display: block;
+  width: 221px;
+  margin: 8px 0 0 16px;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 3px 32px 3px 5px;
+  font-size: 1.6em;
+  color: #444;
+  background-image: url(http://static.ifixit.net/static/images/nano/magnifying_glass.gif);
+  background-position: 236px center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  opacity: .4;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#searchForm #searchBox:focus {
+  opacity: 1.0;
+  outline: none;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerIcons {
+  float: left;
+  height: 40px;
+  margin: 0 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerIcons li {
+  float: left;
+  margin: 0;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerIcons li a {
+  float: left;
+  display: block;
+  height: 40px;
+  padding: 0 16px;
+  font-weight: bold;
+  font-size: 1.167em;
+  line-height: 2.857em;
+  color: #fff;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerIcons li a:hover {
+  text-decoration: underline;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerIcons li.active a {
+  background-color: #2e5885;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#loggedOutNav {
+  position: absolute;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  right: 0;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#loggedOutNav li {
+  float: left;
+  margin: 12px 0 12px 8px;
+  border-left: 1px solid #5c8ab9;
+  padding: 0 5px 0 8px;
+  font-size: 1.2em;
+  line-height: 1.333em;
+  list-style: none;
+  text-align: left;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#loggedOutNav li.first {
+  margin-left: 0;
+  border-left: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#loggedInNav a, #loggedOutNav li a {
+  color: #fff;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#loggedInNav {
+  position: absolute;
+  right: 0;
+  width: 180px;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu {
+  float: right;
+  text-align: right;
+  background-color: #336da8;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu.accountMenuActive {
+  background-color: #2e5885;
+  z-index: 1000;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu, #accountMenu a {
+  color: #fff;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu a#accountMenuLink {
+  display: block;
+  float: right;
+  min-width: 47px;
+  padding: 12px 5px 12px 5px;
+  font-size: 1.2em;
+  line-height: 1.333em;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenuUsername {
+  padding-right: 12px;
+  background-image: url(http://static.ifixit.net/static/images/icons/dropdown_arrow.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu a:hover {
+  text-decoration: underline;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu .accountMenuItem {
+  clear: both;
+  margin: 0;
+  border-top: 1px solid #5c8ab9;
+  padding: 5px;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu .accountMenuGrouped {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#accountMenu #headerAvatar {
+  display: block;
+  float: right;
+  padding: 8px;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#headerAvatar img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header {
+  -webkit-box-shadow: 0 0 6px #666;
+  -moz-box-shadow: -6px 0 6px #666666;
+  box-shadow: 0 0 6px #666;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+/* line 1542, ../../app/stylesheets/screen.scss */
+#header h1 a {
+  width: 76px;
+  height: 25px;
+  background-image: url(http://static.ifixit.net/static/images/ifixit/logo.gif);
+}
+
+/*#***   Start file:  Shared/autocompleter.css       ***#*/
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #7c7c7c;
+  border-left-color: #c3c3c3;
+  border-right-color: #c3c3c3;
+  border-bottom-color: #ddd;
+  background-color: #fff;
+  text-align: left;
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  z-index: 50;
+  background-color: #fff;
   overflow-x: hidden;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li {
+  position: relative;
+  margin: -2px 0 0 0;
+  padding: .2em 1.5em .2em 1em;
+  display: block;
+  float: none!important;
+  cursor: pointer;
+  font-weight: normal;
+  white-space: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+  background-image: none;
+  clear: both;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li.autocompleter-selected {
+  background-color: #777;
+  color: #fff;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices span.autocompleter-queried {
+  display: inline;
+  float: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li.autocompleter-selected span.autocompleter-queried {
+  color: #9fcfff;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li td {
+  vertical-align: top;
+  font-size: 1em;
+  border: none;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li td p {
+  margin: 0;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li table .img {
+  width: 60px;
+  height: 46px;
+}
+
+/* line 1544, ../../app/stylesheets/screen.scss */
+ul.autocompleter-choices li table .text {
+  padding-right: 15px;
+}
+
+/*#***   Start file:  tags.css                       ***#*/
+/* line 1546, ../../app/stylesheets/screen.scss */
+#tagInput {
+  padding-top: 0;
+}
+
+/* line 1546, ../../app/stylesheets/screen.scss */
+#tagsEdit {
+  width: 226px;
+  float: left;
+}
+
+/* line 1546, ../../app/stylesheets/screen.scss */
+#tagsAdd {
+  float: left;
+  width: 2.5em;
+  margin-left: 10px;
+}
+
+/* line 1546, ../../app/stylesheets/screen.scss */
+.saveTagsControl a {
+  width: 6em;
+  float: left;
+}
+
+/* line 1546, ../../app/stylesheets/screen.scss */
+#tagList {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 1546, ../../app/stylesheets/screen.scss */
+#tagList li {
+  height: 20px;
+}
+
+/* line 1550, ../../app/stylesheets/screen.scss */
+#banner #questionTabs {
+  margin: 28px 4px 8px 12px;
+}
+
+/* line 1554, ../../app/stylesheets/screen.scss */
+#banner #questionsBanner {
+  margin: 20px 12px 8px;
+}
+
+/* line 1558, ../../app/stylesheets/screen.scss */
+#banner .bigButton {
+  float: left;
+  margin: 0 5px;
+  text-align: center;
+  width: 195px;
+}
+
+/* line 1565, ../../app/stylesheets/screen.scss */
+#banner .bigButton h2 {
+  border: none;
+  font-size: 1.2em;
+  height: 124px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1573, ../../app/stylesheets/screen.scss */
+#banner .bigButton a {
+  background-image: url(http://static.ifixit.net/static/images/answers/banner-buttons-20091110.gif);
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  height: 100%;
+}
+
+/* line 1581, ../../app/stylesheets/screen.scss */
+#earthButton {
+  background-position: -2px -2px;
+}
+
+/* line 1585, ../../app/stylesheets/screen.scss */
+#earthButton:hover {
+  background-position: -201px -2px;
+}
+
+/* line 1589, ../../app/stylesheets/screen.scss */
+#peopleButton {
+  background-position: -2px -130px;
+}
+
+/* line 1593, ../../app/stylesheets/screen.scss */
+#peopleButton:hover {
+  background-position: -201px -130px;
+}
+
+/* line 1597, ../../app/stylesheets/screen.scss */
+#hornButton {
+  background-position: -2px -258px;
+}
+
+/* line 1601, ../../app/stylesheets/screen.scss */
+#hornButton:hover {
+  background-position: -201px -258px;
+}
+
+/* line 1605, ../../app/stylesheets/screen.scss */
+#banner .bigButton a span {
+  display: block;
+  padding-top: 82px;
+}
+
+/* line 1610, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner h1 {
+  font-size: 3.0em;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+/* line 1616, ../../app/stylesheets/screen.scss */
+#banner .sectionBanner .tagline {
+  color: #aaa;
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 1623, ../../app/stylesheets/screen.scss */
+#questions {
+  margin-top: 16px;
+}
+
+/* line 1627, ../../app/stylesheets/screen.scss */
+#questions table {
+  border-collapse: separate;
+  border-top: 1px dotted #ddd;
+}
+
+/* line 1632, ../../app/stylesheets/screen.scss */
+#questions td {
+  padding: 18px 12px 18px 0;
+  vertical-align: top;
+}
+
+/* line 1637, ../../app/stylesheets/screen.scss */
+#questions .questionStatus {
+  width: 90px;
+}
+
+/* line 1641, ../../app/stylesheets/screen.scss */
+#questions .questionTitle {
+  width: 358px;
+}
+
+/* line 1645, ../../app/stylesheets/screen.scss */
+#questions .questionKeywords {
+  width: 135px;
+}
+
+/* line 1649, ../../app/stylesheets/screen.scss */
+#questions .questionUser {
+  padding-right: 0;
+  width: 312px;
+}
+
+/* line 1654, ../../app/stylesheets/screen.scss */
+#questions .rowMini .questionTitle {
+  width: 343px;
+}
+
+/* line 1658, ../../app/stylesheets/screen.scss */
+#questions .rowMini .questionKeywords {
+  margin-right: 0;
+}
+
+/* line 1662, ../../app/stylesheets/screen.scss */
+.questionStatus p {
+  background-color: #eee;
+  border-radius: 4px;
+  line-height: 1.667em;
+  margin: 0;
+  moz-border-radius: 4px;
+  padding: 3px 5px;
+  webkit-border-radius: 4px;
+}
+
+/* line 1672, ../../app/stylesheets/screen.scss */
+.questionStatus p.answers {
+  margin-bottom: 8px;
+}
+
+/* line 1676, ../../app/stylesheets/screen.scss */
+.questionStatus .unanswered {
+  color: #ed560a;
+}
+
+/* line 1680, ../../app/stylesheets/screen.scss */
+.questionStatus .acceptedAnswer {
+  color: #2aa3d8;
+}
+
+/* line 1684, ../../app/stylesheets/screen.scss */
+#questions .questionTitle h3 {
+  font-size: 1.333em;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+/* line 1690, ../../app/stylesheets/screen.scss */
+#questions .questionTitle p {
+  line-height: 1.667em;
+  margin: 0;
+}
+
+/* line 1695, ../../app/stylesheets/screen.scss */
+.questionKeywords ul {
+  margin: 3px 0 0 8px;
+  padding: 0;
+}
+
+/* line 1700, ../../app/stylesheets/screen.scss */
+.questionKeywords li {
+  line-height: 1.167em;
+  margin: 0 0 0 15px;
+  padding-left: 0;
+}
+
+/* line 1706, ../../app/stylesheets/screen.scss */
+.questionKeywords li a {
+  margin-left: -6px;
+}
+
+/* line 1710, ../../app/stylesheets/screen.scss */
+#questions .questionUser {
+  margin: 0;
+}
+
+/* line 1714, ../../app/stylesheets/screen.scss */
+#questions .userCard {
+  display: block;
+}
+
+/* line 1718, ../../app/stylesheets/screen.scss */
+#questions .userCard img {
+  margin-top: 1px;
+}
+
+/* line 1722, ../../app/stylesheets/screen.scss */
+#questions .userCard p {
+  line-height: 1.667em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* line 1728, ../../app/stylesheets/screen.scss */
+#questions .userCardName a {
+  font-size: 1em;
+}
+
+/* line 1732, ../../app/stylesheets/screen.scss */
+.aboutGroup {
+  clear: both;
+  margin: 25px 0;
+}
+
+/* line 1737, ../../app/stylesheets/screen.scss */
+.aboutImage {
+  background-image: url(http://static.ifixit.net/static/images/answers/about.gif);
+  background-repeat: no-repeat;
+}
+
+/* line 1742, ../../app/stylesheets/screen.scss */
+#aboutImageAnswersIcon {
+  background-position: 0 0;
+  float: left;
+  height: 80px;
+  margin: 0 16px 16px 0;
+  width: 101px;
+}
+
+/* line 1750, ../../app/stylesheets/screen.scss */
+#aboutImageAsk {
+  background-position: 0 -80px;
+  float: right;
+  height: 94px;
+  margin: 0 0 16px 16px;
+  width: 200px;
+}
+
+/* line 1758, ../../app/stylesheets/screen.scss */
+#aboutImageAnswer {
+  background-position: 0 -174px;
+  float: left;
+  height: 94px;
+  margin: -8px 16px 16px 0;
+  width: 200px;
+}
+
+/* line 1766, ../../app/stylesheets/screen.scss */
+#shareList li {
+  margin-left: 210px;
+  padding-left: 0;
+}
+
+/* line 1771, ../../app/stylesheets/screen.scss */
+#aboutReputation {
+  margin-top: 8px;
+  padding: 8px 0;
+}
+
+/* line 1776, ../../app/stylesheets/screen.scss */
+#aboutReputationBody {
+  margin: 0 8px;
+}
+
+/* line 1780, ../../app/stylesheets/screen.scss */
+#aboutReputationImage {
+  background-position: 0 -268px;
+  height: 225px;
+  margin: 0 8px 8px;
+  width: 300px;
+}
+
+/* line 1787, ../../app/stylesheets/screen.scss */
+#aboutReputation table.grayHeader {
+  width: 97%;
+}
+
+/* line 1791, ../../app/stylesheets/screen.scss */
+#aboutReputation .requiredRep {
+  width: 5em;
+}
+
+/* line 1795, ../../app/stylesheets/screen.scss */
+#askQuestion, #selectDevice, #browseRecent {
+  float: right;
+  font-size: 1.6em;
+  margin: 2px 0 8px 8px;
+  width: 140px;
+}
+
+/* line 1802, ../../app/stylesheets/screen.scss */
+#searchQuestions {
+  clear: right;
+  float: right;
+  width: 312px;
+}
+
+/* line 1808, ../../app/stylesheets/screen.scss */
+#searchQuestions .formBody {
+  background-color: #eee;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+}
+
+/* line 1815, ../../app/stylesheets/screen.scss */
+#searchQuestions input {
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  webkit-border-radius: 4px;
+  width: 210px;
+}
+
+/* line 1822, ../../app/stylesheets/screen.scss */
+#searchQuestions a {
+  float: right;
+  width: 60px;
+}
+
+/* line 1827, ../../app/stylesheets/screen.scss */
+#searchQuestions button {
+  float: right;
+  width: 72px;
+}
+
+/* line 1832, ../../app/stylesheets/screen.scss */
+#deviceNavigation h1 {
+  margin: 8px 0 8px;
+}
+
+/* line 1836, ../../app/stylesheets/screen.scss */
+#deviceNavigation #searchQuestions {
+  float: none;
+}
+
+/* line 1840, ../../app/stylesheets/screen.scss */
+#deviceNavigation #askQuestion, #deviceNavigation #selectDevice {
+  float: left;
+  margin: 4px 8px 8px 0;
+}
+
+/* line 1845, ../../app/stylesheets/screen.scss */
+#deviceNavigation #userFilterOptions {
+  margin: 16px 0 -8px;
+}
+
+/* line 1849, ../../app/stylesheets/screen.scss */
+#tagsList span.titleCount {
+  color: #aaa;
+  font-size: .8em;
+}
+
+/* line 1854, ../../app/stylesheets/screen.scss */
+#tagsList ul {
+  margin-top: 8px;
+}
+
+/* line 1858, ../../app/stylesheets/screen.scss */
+#tagsList .column li {
+  margin: 0 0 4px;
+}
+
+/* line 1862, ../../app/stylesheets/screen.scss */
+#tagsList .parent {
+  background-color: #eee;
+  padding: 2px 0;
+}
+
+/* line 1867, ../../app/stylesheets/screen.scss */
+#tagsList .parent a {
+  color: #444;
+  font-weight: bold;
+}
+
+/* line 1872, ../../app/stylesheets/screen.scss */
+.wikiTextEditorToolbar {
+  width: 362px;
+}
+
+/* line 1876, ../../app/stylesheets/screen.scss */
+.qualityBar {
+  border: 1px solid #888;
+  height: 10px;
+  left: 262px;
+  position: absolute;
+  top: 10px;
+  width: 100px;
+}
+
+/* line 1885, ../../app/stylesheets/screen.scss */
+.qualityBar .colorBar {
+  height: 10px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 1892, ../../app/stylesheets/screen.scss */
+.qualityText {
+  color: #444;
+  font-size: 1em;
+  left: 0;
+  line-height: 1em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }

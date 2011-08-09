@@ -1,4 +1,9 @@
 <div id="content">
+	<a class="buttonLink" id="askQuestion" href="/questions/new">Ask a Question</a>
+	<a class="buttonLink" id="selectDevice" href="/Answers/Devices">Browse Groups</a>
+	<h1><%= $redis.hlen('q') %> Questions</h1>
+	<p><strong>Tip: </strong>Most recently asked or answered questions. Help people out by sharing your knowledge, or help a good question get answered by voting it up!</p>
+	<div class="clearer"></div>
 	<div id="questions">
 		<% @questions.each do |q| %>
 			<table class="firstRow">
@@ -12,14 +17,13 @@
 				  </td>
 			      <td class="questionKeywords">
 			         <ul>
-						<li class="muted"><a href="/Answers/Tag/error+29" class="muted">error 29</a></li>
+						<li class="muted"><a href="/Answers/Tag/" class="muted">Ruby on Rails</a></li>
 					</ul>
 			      </td>
 				  <td class="rowField questionUser">
 			   		<div class="userCard userCardHorizontal">
-			      		<a href="" class="muted"><img height="56" width="56" src="" alt="Avatar"></a>
-			      		<p class="userCardName">
-			         		<a href="" class="muted"></a>
+<a href="/User/345913/Aj+Qureshi" class="muted"><img height="56" width="56" src="http://guide-images.ifixit.net/igi/y6kZd1oBioUbbMBj.mini" alt="Avatar"></a>			      		<p class="userCardName">
+			         		<a href="/users/<%= q['id'] %>" class="muted"><%= q['realname'] %></a>
 			      		</p>
 			        	<p class="userCardReputation">
 			            	<span class="userCardScore">1</span>
