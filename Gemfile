@@ -4,7 +4,7 @@ gem 'rake', '0.8.7'
 gem 'rails', '3.0.9'
 gem 'mysql2', '~> 0.2.6'
 
-gem 'hiredis'
+# gem 'hiredis'
 gem 'redis'
 
 gem 'SystemTimer'

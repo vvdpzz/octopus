@@ -3,9 +3,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       t.database_authenticatable :null => false
       
-      t.string :realname
-      t.string :username
-      t.string :me
+      t.column "u_id", :integer, :limit => 5, :null=> false # uses MySQL bigint, stored in redis
+      t.string :username,         :null => false 
+      t.string :first_name,       :null => false
+      t.string :last_name,        :null => false 
+      t.string :image_url,        :default => '/tmp/images/' #
+      t.string :about_me
       t.integer :subscribe_count
       t.integer :following_count
       t.integer :follower_count
