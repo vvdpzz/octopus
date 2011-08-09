@@ -9,7 +9,7 @@ class Question < ActiveRecord::Base
   # validate :credit_enough, :money_enough
   
   def self.questions_list
-    hash_name = "questions"
+    hash_name = "q"
     questions = $redis.hvals(hash_name)
   end
   

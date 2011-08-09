@@ -12,7 +12,7 @@ class Answer < ActiveRecord::Base
     self.created_at = self.updated_at = Time.now.to_i
 
     # redis hash name
-    hash_name = "questions:#{self.question_id}"
+    hash_name = "q:#{self.question_id}.as"
     
     # hash key name
     key = $redis.incr 'next.answer.id'
