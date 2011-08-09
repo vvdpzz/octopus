@@ -23,6 +23,8 @@ class Question < ActiveRecord::Base
     # hash key name
     key = $redis.incr 'next.question.id'
     
+    self.id = key
+    
     # serialize it into json
     value = MultiJson.encode(self.serializable_hash)
 

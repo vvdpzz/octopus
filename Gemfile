@@ -18,3 +18,5 @@ gem 'multi_json'
 gem 'enumerate_it'
 
 gem 'capistrano'
+
+gem 'compass'

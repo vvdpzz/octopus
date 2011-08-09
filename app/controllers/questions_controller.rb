@@ -1,7 +1,10 @@
 class QuestionsController < ApplicationController
   
   def index
-    
+    @questions = []
+    $redis.hvals('q').each do |q|
+      @questions << JSON.parse(q)
+    end
   end
   
   def ask_question
@@ -23,7 +26,7 @@ class QuestionsController < ApplicationController
     @question = Question.new params[:question]
     
     @question.user_id = current_user.id
-    @question.username = current_user.realname
+    @question.realname = current_user.realname
     
     if @question.valid?
       @question.insert_to_redis
@@ -39,7 +42,7 @@ class QuestionsController < ApplicationController
         current_user.pay_for_q_or_a("money", @question.money)
       end
       
-      redirect_to @question
+      redirect_to questions_url
     else
       render :new
     end

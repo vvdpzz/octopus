@@ -1,0 +1,34 @@
+<div id="content">
+	<div id="questions">
+		<% @questions.each do |q| %>
+			<table class="firstRow">
+			   <tbody><tr class="row " data-postid="17729">
+			      <td class="questionStatus">
+			         <p class="answers answered"><%= $redis.hlen("q:#{q['id']}.as") %> Answers</p>
+			         <p class="vote"><%= $redis.get("#{q['id']}.vote").to_i %> Votes</p>
+			      </td>
+			      <td class="questionTitle">
+			         <h3><%= link_to q['title'], "/questions/#{q['id']}", :class => 'focus' %></h3>
+				  </td>
+			      <td class="questionKeywords">
+			         <ul>
+						<li class="muted"><a href="/Answers/Tag/error+29" class="muted">error 29</a></li>
+					</ul>
+			      </td>
+				  <td class="rowField questionUser">
+			   		<div class="userCard userCardHorizontal">
+			      		<a href="" class="muted"><img height="56" width="56" src="" alt="Avatar"></a>
+			      		<p class="userCardName">
+			         		<a href="" class="muted"></a>
+			      		</p>
+			        	<p class="userCardReputation">
+			            	<span class="userCardScore">1</span>
+			      		</p>
+			        	<p class="userCardDetail">Answered <time title="" datetime="">21 minutes ago</time></p>
+			        </div>
+			      </td>
+			   </tr>
+			</tbody></table>
+		<% end %>
+	</div>
+</div>

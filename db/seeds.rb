@@ -2,8 +2,8 @@ puts "Removing all users >_<\n\n"
 User.delete_all
 
 puts "Creating some test users >_<\n\n"
-User.create(:email => 'vvdpzz@gmail.com', :password => 'vvdpzz')
-User.create(:email => 'tzzzoz@gmail.com', :password => 'tzzzoz')
+User.create(:email => 'vvdpzz@gmail.com', :password => 'vvdpzz', :realname => '陈振宇', :username => 'vvdpzz')
+User.create(:email => 'tzzzoz@gmail.com', :password => 'tzzzoz', :realname => '喻柏程', :username => 'tzzzoz')
 
 $redis.multi do
   puts "Flushing redis db >_<\n\n"
