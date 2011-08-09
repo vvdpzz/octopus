@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tag_id_1: MyString
+  tag_id_2: MyString
+  father: false
+  brother: false
+  active: false
+
+two:
+  tag_id_1: MyString
+  tag_id_2: MyString
+  father: false
+  brother: false
+  active: false

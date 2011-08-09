@@ -2,8 +2,7 @@ class CreateQuestions < ActiveRecord::Migration
   def self.up
     create_table :questions do |t|
       t.references :user
-      
-      t.integer :uuid
+      t.integer    :uuid, :limit => 5, :null=> false # uses MySQL bigint, stored in redis
       
       t.string :title
       t.text :content
