@@ -35,8 +35,8 @@ class Question < ActiveRecord::Base
     $redis.set("q:#{key}.uid", user_id)
   end
   
-  def is_free?
-    self.credit == 0 && self.money == 0.00
+  def not_free?
+    !(self.credit == 0 && self.money == 0.00)
   end
     
   # validations

@@ -1,9 +1,20 @@
 class QuestionsController < ApplicationController
   
   def index
+    ids = $redis.sort("questions", "q:*->created_at desc")
     @questions = []
-    $redis.hvals('q').each do |q|
-      @questions << JSON.parse(q)
+    ids.each do |id|
+      user_id = $redis.hget("q:#{id}", 'user_id')
+
+      hash = $redis.hgetall("q:#{id}")
+      hash['realname'] = $redis.hget("u:#{user_id}", 'realname')
+      hash['user_credit'] = $redis.hget("u:#{user_id}", 'credit')
+
+      @questions << MultiJson.encode(hash)
+    end
+    respond_to do |format|
+      format.html
+      format.json {render :json => @questions}
     end
   end
   
@@ -12,10 +23,7 @@ class QuestionsController < ApplicationController
   end
   
   def show
-    value = $redis.hget('q', params[:id])
-    @question = JSON.parse value
-    hash_name = "q:#{params[:id]}"
-    @answers = $redis.hvals(hash_name)
+    @question = MultiJson.encode($redis.hgetall("q:#{params[:id]}"))
   end
   
   def new
@@ -24,24 +32,30 @@ class QuestionsController < ApplicationController
   
   def create
     @question = Question.new params[:question]
-    
-    @question.user_id = current_user.id
-    @question.realname = current_user.realname
-    
-    if @question.valid?
-      @question.insert_to_redis
-      # asker pay for question
-      if !@question.is_free?
-        
-        user_new_credit = $redis.hget("u:#{current_user.id}", "credit").to_i - amount
-        $redis.hset("u:#{current_user.id}", "credit", user_new_credit)
 
-        question_new_credit = $redis.hget("q:#{@question.id}.json")
+    @question.id = $redis.incr 'next.question.id'
+    @question.uuid = Generate_uuid.new
+    @question.user_id = current_user.id
+    @question.created_at = @question.updated_at = Time.now
+
+    if @question.valid?
+
+      @question.attributes.each do |key, value|
+        $redis.hset("q:#{@question.uuid}", key, value)
+      end
+
+      if @question.not_free?
         
-        current_user.pay_for_q_or_a("credit", @question.credit)
-        current_user.pay_for_q_or_a("money", @question.money)
+        user_new_credit = $redis.hget("u:#{current_user.id}", 'credit').to_i - @question.credit
+        $redis.hset("u:#{current_user.id}", 'credit', user_new_credit)
+        
+        user_new_money = $redis.hget("u:#{current_user.id}", 'money').to_i - @question.money
+        $redis.hset("u:#{current_user.id}", 'money', user_new_money)
+        
       end
       
+      $redis.sadd("questions", @question.uuid)
+
       redirect_to questions_url
     else
       render :new

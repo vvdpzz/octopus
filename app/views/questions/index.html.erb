@@ -1,19 +1,20 @@
 <div id="content">
 	<a class="buttonLink" id="askQuestion" href="/questions/new">Ask a Question</a>
 	<a class="buttonLink" id="selectDevice" href="/Answers/Devices">Browse Groups</a>
-	<h1><%= $redis.hlen('q') %> Questions</h1>
+	<h1><%= $redis.scard('questions') %> Questions</h1>
 	<p><strong>Tip: </strong>Most recently asked or answered questions. Help people out by sharing your knowledge, or help a good question get answered by voting it up!</p>
 	<div class="clearer"></div>
 	<div id="questions">
 		<% @questions.each do |q| %>
+			<% j = JSON.parse q %>
 			<table class="firstRow">
 			   <tbody><tr class="row " data-postid="17729">
 			      <td class="questionStatus">
-			         <p class="answers answered"><%= $redis.hlen("q:#{q['id']}.as") %> Answers</p>
-			         <p class="vote"><%= $redis.get("#{q['id']}.vote").to_i %> Votes</p>
+			         <p class="answers answered"><%= j['answer_count'] %> Answers</p>
+			         <p class="vote"><%= j['vote_count'] %> Votes</p>
 			      </td>
 			      <td class="questionTitle">
-			         <h3><%= link_to q['title'], "/questions/#{q['id']}", :class => 'focus' %></h3>
+			         <h3><%= link_to j['title'], "/questions/#{j['uuid']}", :class => 'focus' %></h3>
 				  </td>
 			      <td class="questionKeywords">
 			         <ul>
@@ -23,12 +24,12 @@
 				  <td class="rowField questionUser">
 			   		<div class="userCard userCardHorizontal">
 <a href="/User/345913/Aj+Qureshi" class="muted"><img height="56" width="56" src="http://guide-images.ifixit.net/igi/y6kZd1oBioUbbMBj.mini" alt="Avatar"></a>			      		<p class="userCardName">
-			         		<a href="/users/<%= q['id'] %>" class="muted"><%= q['realname'] %></a>
+			         		<a href="/users/<%= q['id'] %>" class="muted"><%= j['realname'] %></a>
 			      		</p>
 			        	<p class="userCardReputation">
-			            	<span class="userCardScore">1</span>
+			            	<span class="userCardScore"><%= j['user_credit'] %></span>
 			      		</p>
-			        	<p class="userCardDetail">Answered <time title="" datetime="">21 minutes ago</time></p>
+			        	<p class="userCardDetail">Answered <time title="" datetime=""><%= time_ago_in_words(Time.at j['created_at'].to_i) %> ago</time></p>
 			        </div>
 			      </td>
 			   </tr>

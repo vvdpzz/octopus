@@ -1,15 +1,16 @@
-<h1><%= @question['title'] %></h1>
+<% j = JSON.parse(@question) %>
+<h1><%= j['title'] %></h1>
 <p>
-	<%= @question['content'] %>
+	<%= j['content'] %>
 </p>
 <p>
-	<%= @question['credit'] %>
+	<%= j['credit'] %>
 </p>
 <p>
-	<%= @question['money'] %>
+	<%= j['money'] %>
 </p>
 <p>
-	<%= @question['expire_time'] %>
+	<%= j['expire_time'] %>
 </p>
 
 <hr>
