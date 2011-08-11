@@ -24,6 +24,10 @@ class QuestionsController < ApplicationController
   
   def show
     @question = MultiJson.encode($redis.hgetall("q:#{params[:id]}"))
+    answer_ids = $redis.smembers("q:#{params[:id]}.as")
+    answer_ids.each do |answer_id|
+      @answers << MultiJson.encode($redis.hgetall("a:#{answer_id}"))
+    end
   end
   
   def new
@@ -36,14 +40,18 @@ class QuestionsController < ApplicationController
     @question.id = $redis.incr 'next.question.id'
     @question.uuid = Generate_uuid.new
     @question.user_id = current_user.id
-    @question.created_at = @question.updated_at = Time.now
+    @question.created_at = @question.updated_at = Time.now.to_i
 
     if @question.valid?
 
-      @question.attributes.each do |key, value|
-        $redis.hset("q:#{@question.uuid}", key, value)
+      @question.attributes.each do |field, value|
+        $redis.hset("q:#{@question.uuid}", field, value)
       end
+      # 添 加 用 户 用 户 问 题 索 引
+      $redis.sadd("u:#{@question.user_id}.qs", @question.uuid)
 
+
+      # 悬 赏 问 题
       if @question.not_free?
         
         user_new_credit = $redis.hget("u:#{current_user.id}", 'credit').to_i - @question.credit
@@ -53,7 +61,7 @@ class QuestionsController < ApplicationController
         $redis.hset("u:#{current_user.id}", 'money', user_new_money)
         
       end
-      
+      # 问 题 集 合（ 供 排 序 ）
       $redis.sadd("questions", @question.uuid)
 
       redirect_to questions_url

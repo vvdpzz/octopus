@@ -2,8 +2,14 @@
 
 one:
   user: 
+  uuid: 1
   content: MyText
+  parent_id: 1
+  parent_uid: 1
 
 two:
   user: 
+  uuid: 1
   content: MyText
+  parent_id: 1
+  parent_uid: 1

@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
   
   # validates_length_of :title, :within => 10..70
   
-  # validate :credit_enough, :money_enough
+  validate :credit_enough, :money_enough
   
   def self.questions_list
     hash_name = "questions"
@@ -42,13 +42,13 @@ class Question < ActiveRecord::Base
   # validations
   def credit_enough
     # 需 要 获 取 当 前 用 户 的 user_id
-    current_user_credit = $redis.hget("u:#{current_user.id}", 'credit')
+    current_user_credit = $redis.hget("u:#{self.user_id}", 'credit').to_i
     errors.add(:credit, "you do not have enough credit to pay.") if current_user_credit < self.credit
   end
   
   def money_enough
     # 需 要 获 取 当 前 用 户 的 user_id
-    current_user_money = $redis.hget("u:#{current_user.id}", 'money')
+    current_user_money = $redis.hget("u:#{self.user_id}", 'money').to_i
     errors.add(:money, "you do not have enough money to pay.") if current_user_money < self.money
   end
 end

@@ -8,15 +8,12 @@ class CreateAnswers < ActiveRecord::Migration
       t.boolean :anonymous, :default => false
       
       t.text :content
-      t.string :realname
-      t.string :about_me,     :null => false, :default => '' 
       
-      t.integer :vote,        :null => false, :default => 0
-      t.boolean :is_correct,  :null => false, :default => false # 是 否 是 正 确 答 案
-      t.integer :credit,      :null => false, :default => 0
-      
-      t.integer :created_at
-      t.integer :updated_at
+      t.integer :vote_count, :default => 0
+      t.boolean :is_correct, :default => false # 是 否 是 正 确 答 案
+      t.integer :quid
+      t.integer :created_at, :default => 0
+      t.integer :updated_at, :default => 0
       #t.column :comment_a_json, :binary, :limit => 10.megabyte #Make it into Redis, and use link table to show the relationship
       #comment_a_json 字 段 存 储 示 例
       #{"id": "71f0c4d2291844cca2df6f486e96e37c",
