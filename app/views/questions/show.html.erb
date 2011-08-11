@@ -3,7 +3,7 @@
 <hr>
 <%= j['answers'][0]['content'] %>
 <%= j['answers'][1]['content'] %>
-<%= j['answers'].length %>
+
 <%= form_for(Comment.new, :url => "/questions/#{params[:id]}/comments") do |f| %>
 	<%= f.text_area :content %>
 	<%= f.submit 'Create an Comment' %>

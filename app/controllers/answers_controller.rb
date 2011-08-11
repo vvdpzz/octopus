@@ -35,19 +35,19 @@ class AnswersController < ApplicationController
   
   def accept
     question_id = params[:question_id]
-    answer_id = params[:answer_id]
+    answer_id = params[:id]
     accept_a_id = $redis.hget("q:#{question_id}", "accept_a_id")
     # 判 断 问 题 是 否 已 接 受 正 确 答 案
     if accept_a_id.empty?
-      reward_credit = $redis.hget("q:#{question_id}", "credit")
-      reward_money = $redis.hget("q:#{question_id}", "money")
+      reward_credit = $redis.hget("q:#{question_id}", "credit").to_i
+      reward_money = $redis.hget("q:#{question_id}", "money").to_i
       champion_id = $redis.hget("a:#{answer_id}", "user_id")
     
       $redis.hset("a:#{answer_id}", "is_correct", true)
       $redis.hset("q:#{question_id}", "accept_a_id", answer_id)
       $redis.sadd("answered_questions", question_id)
-      user_new_credit = $redis.hget("u:#{champion_id}", "credit") + reward
-      user_new_money = $redis.hget("u:#{champion_id}", "money") + reward
+      user_new_credit = $redis.hget("u:#{champion_id}", "credit").to_i + reward_credit
+      user_new_money = $redis.hget("u:#{champion_id}", "money").to_i + reward_money
     
       $redis.hset("u:#{champion_id}", "credit", user_new_credit)
       $redis.hset("u:#{champion_id}", "money", user_new_money)
