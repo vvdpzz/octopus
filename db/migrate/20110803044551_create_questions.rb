@@ -16,7 +16,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.integer :vote_count, :default => 0
       t.integer :view_count, :default => 1
       
-      t.integer :accept_a_id, :default => 0
+      t.integer :accept_a_id, :limit => 5, :null => false
       t.string :status, :default => 'normal'
       
       t.integer :expire_time, :default => 0

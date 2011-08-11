@@ -9,8 +9,14 @@ Octopus::Application.routes.draw do
         get 'down'
       end
     end
+    
     resources :comments
-    resources :answers
+    
+    resources :answers do
+      member do
+        get 'accept'
+      end
+    end
   end
   
   resources :answers, :only => [] do
