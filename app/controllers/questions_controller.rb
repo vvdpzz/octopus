@@ -22,11 +22,23 @@ class QuestionsController < ApplicationController
     questions = Question.questions_list
   end
   
-  def show
-    @question = MultiJson.encode($redis.hgetall("q:#{params[:id]}"))
+  def show    
+    question = $redis.hgetall("q:#{params[:id]}")
     answer_ids = $redis.smembers("q:#{params[:id]}.as")
+    answers = []
     answer_ids.each do |answer_id|
-      @answers << MultiJson.encode($redis.hgetall("a:#{answer_id}"))
+      answers << $redis.hgetall("a:#{answer_id}")
+    end
+    
+    hash = {}
+    hash['question'] = question
+    hash['answers'] = answers
+    
+    @result = MultiJson.encode(hash)
+    
+    respond_to do |format|
+      format.html
+      format.json {render :json => @result }
     end
   end
   

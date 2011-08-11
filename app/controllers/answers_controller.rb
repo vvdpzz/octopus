@@ -7,8 +7,8 @@ class AnswersController < ApplicationController
     @answer.question_id = params[:question_id]
     @answer.user_id = current_user.id
     @answer.created_at = @answer.updated_at = Time.now.to_i
-    question = $redis.hgetall("q:#{@answer.question_id}")
-    @answer.quid = question["user_id"]
+    question = $redis.hgetall("q:#{params[:question_id]}")
+    @answer.quid = question['user_id']
     
 
     if @answer.valid?
@@ -22,7 +22,7 @@ class AnswersController < ApplicationController
       $redis.sadd("q:#{@answer.question_id}.as", @answer.uuid)
       
       # 判 断 问 题 是 否 有 悬 赏
-      if question["credit"].to_i != 0 || question["money"].to_i != 0.0
+      if question['credit'].to_i != 0 || question['money'].to_f != 0.0
         user_new_credit = $redis.hget("u:#{current_user.id}", "credit").to_i - APP_CONFIG['answer_charge']
         $redis.hset("u:#{current_user.id}", "credit", user_new_credit)
       end
