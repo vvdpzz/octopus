@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.json {render :json => @questions}
+      format.json {render :json => @questions }
     end
   end
   
