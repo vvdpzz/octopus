@@ -1,5 +1,4 @@
 Octopus::Application.routes.draw do
-  get "comments/create"
 
   devise_for :users
   
@@ -10,6 +9,7 @@ Octopus::Application.routes.draw do
         get 'down'
       end
     end
+    resources :comments
     resources :answers
   end
   
@@ -20,8 +20,8 @@ Octopus::Application.routes.draw do
         get 'down'
       end
     end
-  end
-  
+    resources :comments
+  end  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
